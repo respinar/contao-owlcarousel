@@ -1,5 +1,5 @@
 {
-    "name": "respinar/contao-oqlcarousel",
+    "name": "respinar/contao-owlcarousel",
     "description": "Owl Carousel module for Contao",
     "keywords": ["contao", "Carousel","Slider"],
     "type": "contao-module",
