@@ -12,24 +12,24 @@
 /**
  * Add palettes to tl_module
  */
-$GLOBALS['TL_DCA']['tl_module']['palettes']['owlcarousel']   = '{title_legend},name,headline,type;{owlcarousel_legend},owlcarousel;{template_legend},slide_template,customTpl;{options_legend},items,smartSpeed,margin,stagePadding,infinityLoop,rewind,rtl,center,lazyLoad;{merge_legend},merge,mergeFit,autoWidth,autoHeight;{nav_legend},nav;{dots_legend},dots;{autoplay_legend},autoplay;{animate_legend:hide},animateIn,animateOut;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['owlcarousel']   = '{title_legend},name,headline,type;{owlcarousel_legend},owl_carousel;{template_legend},owl_slide_template,customTpl;{owl_options_legend},owl_items,owl_smartSpeed,owl_margin,owl_stagePadding,owl_loop,owl_rewind,owl_rtl,owl_center,owl_lazyLoad;{owl_merge_legend},owl_merge,owl_mergeFit,owl_autoWidth,owl_autoHeight;{owl_nav_legend},owl_nav;{owl_dots_legend},owl_dots;{owl_autoplay_legend},owl_autoplay;{owl_animate_legend:hide},owl_animateIn,owl_animateOut;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
 
-$GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'nav';
-$GLOBALS['TL_DCA']['tl_module']['subpalettes']['nav'] = 'navText_prev,navText_next,navSpeed,slideBy';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'owl_nav';
+$GLOBALS['TL_DCA']['tl_module']['subpalettes']['owl_nav'] = 'owl_navText_prev,owl_navText_next,owl_navSpeed,owl_slideBy';
 
-$GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'dots';
-$GLOBALS['TL_DCA']['tl_module']['subpalettes']['dots'] = 'dotsEach,dotsSpeed';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'owl_dots';
+$GLOBALS['TL_DCA']['tl_module']['subpalettes']['owl_dots'] = 'owl_dotsEach,owl_dotsSpeed';
 
-$GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'autoplay';
-$GLOBALS['TL_DCA']['tl_module']['subpalettes']['autoplay'] = 'autoplayHoverPause,autoplaySpeed,autoplayTimeout';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'owl_autoplay';
+$GLOBALS['TL_DCA']['tl_module']['subpalettes']['owl_autoplay'] = 'owl_autoplayHoverPause,owl_autoplaySpeed,owl_autoplayTimeout';
 
 
 /**
  * Add fields to tl_module
  */
-$GLOBALS['TL_DCA']['tl_module']['fields']['owlcarousel'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_carousel'] = array
 (
-	'label'                => &$GLOBALS['TL_LANG']['tl_module']['owlcarousel'],
+	'label'                => &$GLOBALS['TL_LANG']['tl_module']['owl_carousel'],
 	'exclude'              => true,
 	'inputType'            => 'radio',
 	'foreignKey'           => 'tl_owlcarousel.title',
@@ -37,9 +37,9 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['owlcarousel'] = array
 	'sql'				   => "int(10) unsigned NOT NULL default '0'",
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['slide_template'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_slide_template'] = array
 (
-	'label'                => &$GLOBALS['TL_LANG']['tl_module']['slide_template'],
+	'label'                => &$GLOBALS['TL_LANG']['tl_module']['owl_slide_template'],
 	'exclude'              => true,
 	'inputType'            => 'select',
 	'options_callback'     => array('tl_module_owlcarousel', 'getSlideTemplates'),
@@ -47,35 +47,35 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['slide_template'] = array
 	'sql'				   => "varchar(64) NOT NULL default ''",
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['items'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_items'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['items'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_items'],
 	'exclude'                 => true,
 	'inputType'               => 'text',
 	'eval'                    => array('rgxp'=>'natural', 'tl_class'=>'w50'),
 	'sql'                     => "smallint(5) unsigned NOT NULL default '3'"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['margin'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_margin'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['margin'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_margin'],
 	'exclude'                 => true,
 	'inputType'               => 'text',
 	'eval'                    => array('rgxp'=>'natural', 'tl_class'=>'w50'),
 	'sql'                     => "smallint(5) unsigned NOT NULL default '0'"
 );
-$GLOBALS['TL_DCA']['tl_module']['fields']['stagePadding'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_stagePadding'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['stagePadding'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_stagePadding'],
 	'exclude'                 => true,	
 	'inputType'               => 'text',
 	'eval'                    => array('rgxp'=>'natural', 'tl_class'=>'w50'),
 	'sql'                     => "smallint(5) unsigned NOT NULL default '0'"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['infinityLoop'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_loop'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['infinityLoop'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_loop'],
 	'exclude'                 => true,
 	'default'                 => true,
 	'inputType'               => 'checkbox',
@@ -83,80 +83,80 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['infinityLoop'] = array
 	'sql'                     => "char(1) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['center'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_center'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['center'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_center'],
 	'exclude'                 => true,
 	'inputType'               => 'checkbox',
 	'eval'                    => array('tl_class'=>'w50'),
 	'sql'                     => "char(1) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['rtl'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_rtl'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['rtl'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_rtl'],
 	'exclude'                 => true,
 	'inputType'               => 'checkbox',
 	'eval'                    => array('tl_class'=>'w50'),
 	'sql'                     => "char(1) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['lazyLoad'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_lazyLoad'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['lazyLoad'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_lazyLoad'],
 	'exclude'                 => true,
 	'inputType'               => 'checkbox',
 	'eval'                    => array('tl_class'=>'w50'),
 	'sql'                     => "char(1) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['merge'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_merge'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['merge'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_merge'],
 	'exclude'                 => true,
 	'inputType'               => 'checkbox',
 	'eval'                    => array('tl_class'=>'w50'),
 	'sql'                     => "char(1) NOT NULL default ''"
 );
-$GLOBALS['TL_DCA']['tl_module']['fields']['mergeFit'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_mergeFit'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['mergeFit'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_mergeFit'],
 	'exclude'                 => true,
 	'default'                 => true,
 	'inputType'               => 'checkbox',
 	'eval'                    => array('tl_class'=>'w50'),
 	'sql'                     => "char(1) NOT NULL default ''"
 );
-$GLOBALS['TL_DCA']['tl_module']['fields']['autoWidth'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_autoWidth'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['autoWidth'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_autoWidth'],
 	'exclude'                 => true,
 	'inputType'               => 'checkbox',
 	'eval'                    => array('tl_class'=>'w50'),
 	'sql'                     => "char(1) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['autoHeight'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_autoHeight'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['autoHeight'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_autoHeight'],
 	'exclude'                 => true,
 	'inputType'               => 'checkbox',
 	'eval'                    => array('tl_class'=>'w50'),
 	'sql'                     => "char(1) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['nav'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_nav'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['nav'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_nav'],
 	'exclude'                 => true,
 	'inputType'               => 'checkbox',
-	'eval'                    => array('submitOnChange'=>true,),
+	'eval'                    => array('submitOnChange'=>true),
 	'sql'                     => "char(1) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['rewind'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_rewind'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['rewind'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_rewind'],
 	'exclude'                 => true,
 	'default'                 => true,
 	'inputType'               => 'checkbox',
@@ -164,9 +164,9 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['rewind'] = array
 	'sql'                     => "char(1) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['navText_prev'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_navText_prev'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['navText_prev'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_navText_prev'],
 	'exclude'                 => true,
 	'search'                  => true,
 	'default'                 => 'prev',
@@ -175,9 +175,9 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['navText_prev'] = array
 	'sql'                     => "varchar(64) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['navText_next'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_navText_next'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['navText_next'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_navText_next'],
 	'exclude'                 => true,
 	'search'                  => true,
 	'default'                 => 'next',
@@ -186,82 +186,82 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['navText_next'] = array
 	'sql'                     => "varchar(64) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['navSpeed'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_navSpeed'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['navSpeed'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_navSpeed'],
 	'exclude'                 => true,
 	'inputType'               => 'text',
 	'eval'                    => array('rgxp'=>'natural', 'tl_class'=>'w50'),
 	'sql'                     => "smallint(5) unsigned NOT NULL default '0'"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['slideBy'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_slideBy'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['slideBy'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_slideBy'],
 	'exclude'                 => true,
 	'inputType'               => 'text',
 	'eval'                    => array('rgxp'=>'natural','tl_class'=>'w50'),
 	'sql'                     => "smallint(5) unsigned NOT NULL default '1'"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['dots'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_dots'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['dots'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_dots'],
 	'exclude'                 => true,
 	'default'                 => true,
 	'inputType'               => 'checkbox',
-	'eval'                    => array('tl_class'=>'','submitOnChange'=>true),
+	'eval'                    => array('submitOnChange'=>true),
 	'sql'                     => "char(1) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['dotsEach'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_dotsEach'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['dotsEach'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_dotsEach'],
 	'exclude'                 => true,
 	'inputType'               => 'text',
 	'eval'                    => array('rgxp'=>'natural', 'tl_class'=>'w50'),
 	'sql'                     => "smallint(5) unsigned NOT NULL default '0'"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['dotsSpeed'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_dotsSpeed'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['dotsSpeed'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_dotsSpeed'],
 	'exclude'                 => true,
 	'inputType'               => 'text',
 	'eval'                    => array('rgxp'=>'natural', 'tl_class'=>'w50'),
 	'sql'                     => "smallint(5) unsigned NOT NULL default '0'"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['autoplay'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_autoplay'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['autoplay'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_autoplay'],
 	'exclude'                 => true,
 	'inputType'               => 'checkbox',
-	'eval'                    => array('tl_class'=>'w','submitOnChange'=>true),
+	'eval'                    => array('submitOnChange'=>true),
 	'sql'                     => "char(1) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['autoplayHoverPause'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_autoplayHoverPause'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['autoplayHoverPause'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_autoplayHoverPause'],
 	'exclude'                 => true,
 	'inputType'               => 'checkbox',
 	'eval'                    => array('tl_class'=>'w50 clr'),
 	'sql'                     => "char(1) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['autoplaySpeed'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_autoplaySpeed'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['autoplaySpeed'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_autoplaySpeed'],
 	'exclude'                 => true,
 	'inputType'               => 'text',
 	'eval'                    => array('rgxp'=>'natural', 'tl_class'=>'w50 clr'),
 	'sql'                     => "smallint(5) unsigned NOT NULL default '0'"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['autoplayTimeout'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_autoplayTimeout'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['autoplayTimeout'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_autoplayTimeout'],
 	'exclude'                 => true,
 	'default'                  => 5000,
 	'inputType'               => 'text',
@@ -269,9 +269,9 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['autoplayTimeout'] = array
 	'sql'                     => "smallint(5) unsigned NOT NULL default '0'"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['smartSpeed'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_smartSpeed'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['smartSpeed'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_smartSpeed'],
 	'exclude'                 => true,
 	'default'                  => 250,
 	'inputType'               => 'text',
@@ -279,18 +279,18 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['smartSpeed'] = array
 	'sql'                     => "smallint(5) unsigned NOT NULL default '0'"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['fluidSpeed'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_fluidSpeed'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['fluidSpeed'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_fluidSpeed'],
 	'exclude'                 => true,
 	'inputType'               => 'text',
 	'eval'                    => array('rgxp'=>'natural', 'tl_class'=>'w50'),
 	'sql'                     => "smallint(5) unsigned NOT NULL default '0'"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['animateIn'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_animateIn'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['animateIn'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_animateIn'],
 	'exclude'                 => true,
 	'search'                  => true,
 	'inputType'               => 'select',
@@ -299,9 +299,9 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['animateIn'] = array
 	'sql'                     => "varchar(64) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['animateOut'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_animateOut'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['animateOut'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_animateOut'],
 	'exclude'                 => true,
 	'search'                  => true,
 	'inputType'               => 'select',

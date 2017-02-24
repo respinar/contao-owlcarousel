@@ -13,4 +13,4 @@
 /**
  * Miscellaneous
  */
-$GLOBALS['TL_LANG']['MSC']['noSlide'] = 'No slide!';
+$GLOBALS['TL_LANG']['MSC']['owlcarousel_noSlide'] = 'No slide!';

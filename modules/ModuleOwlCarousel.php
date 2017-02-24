@@ -48,7 +48,7 @@ class ModuleOwlCarousel extends \Module
 		}		
 
 		// No catalog categries available
-		if (!isset($this->owlcarousel))
+		if (!isset($this->owl_carousel))
 		{
 			return '';
 		}
@@ -59,7 +59,7 @@ class ModuleOwlCarousel extends \Module
             $GLOBALS['TL_CSS'][] = 'system/modules/owlcarousel/assets/vendor/OwlCarousel2/OwlCarousel2/assets/owl.carousel.min.css|static';
 			$GLOBALS['TL_CSS'][] = 'system/modules/owlcarousel/assets/vendor/OwlCarousel2/OwlCarousel2/assets/owl.theme.default.min.css|static';
 
-			if(($this->animateIn || $this->animateOut) && $this->items==1)			
+			if(($this->owl_animateIn || $this->owl_animateOut) && $this->owl_items==1)			
 			{
 				$GLOBALS['TL_CSS'][] = 'system/modules/owlcarousel/assets/vendor/daneden/animate.css/animate.min.css|static';
 			}
@@ -75,16 +75,16 @@ class ModuleOwlCarousel extends \Module
 	protected function compile()
 	{		
 
-		$intTotal = \OwlCarouselSlideModel::countPublishedByPid($this->owlcarousel);
+		$intTotal = \OwlCarouselSlideModel::countPublishedByPid($this->owl_carousel);
 
 		if ($intTotal < 1)
 		{
-			$this->Template->empty = $GLOBALS['TL_LANG']['MSC']['noSlide'];
+			$this->Template->empty = $GLOBALS['TL_LANG']['MSC']['owlcarousel_noSlide'];
 			
 			return;
 		}
 
-		$objSlides = \OwlCarouselSlideModel::findPublishedByPid($this->owlcarousel);
+		$objSlides = \OwlCarouselSlideModel::findPublishedByPid($this->owl_carousel);
 
 		// No items found
 		if ($objSlides !== null)
@@ -118,7 +118,7 @@ class ModuleOwlCarousel extends \Module
 	protected function parseSlide($objSlide, $strClass='', $intCount=0)
 	{
 
-		$objTemplate = new \FrontendTemplate($this->slide_template);
+		$objTemplate = new \FrontendTemplate($this->owl_slide_template);
 
 		$objTemplate->setData($objSlide->row());
 
@@ -139,7 +139,7 @@ class ModuleOwlCarousel extends \Module
 			elseif (is_file(TL_ROOT . '/' . $objModel->path))
 			{
 				// Do not override the field now that we have a model registry (see #6303)
-				$arrLink = $objSlide->row();
+				$arrSlide = $objSlide->row();
 
 				// Override the default image size
 				if ($this->imgSize != '')
@@ -148,18 +148,17 @@ class ModuleOwlCarousel extends \Module
 
 					if ($size[0] > 0 || $size[1] > 0 || is_numeric($size[2]))
 					{
-						$arrLink['size'] = $this->imgSize;
+						$arrSlide['size'] = $this->imgSize;
 					}
 				}
 
-				$arrLink['singleSRC'] = $objModel->path;				
-				$this->addImageToTemplate($objTemplate, $arrLink);
+				$arrSlide['singleSRC'] = $objModel->path;				
+				$this->addImageToTemplate($objTemplate, $arrSlide);
 			}
 		}		
 
 		$objTemplate->class     = $strClass;
 		$objTemplate->hrefclass = $objSlide->class;
-		$objTemplate->linkTitle = $objSlide->title ? $objSlide->title : $objSlide->title;
 
 		return $objTemplate->parse();
 

@@ -14,89 +14,89 @@
 <script>
   $('.owl-carousel').owlCarousel({
 
-    items:<?= $this->items ?>,
-    <?php if($this->infinityLoop): ?>    
+    items:<?= $this->owl_items ?>,
+    <?php if($this->owl_loop): ?>    
       loop:true,
     <?php endif; ?>    
-    <?php if($this->center): ?> 
+    <?php if($this->owl_center): ?> 
       center:true,
     <?php endif; ?> 
-    <?php if($this->rewind): ?> 
+    <?php if($this->owl_rewind): ?> 
       rewind:true,
     <?php endif; ?>      
 
-    margin:<?= $this->margin ?>,
-    stagePadding:<?= $this->stagePadding ?>,
+    margin:<?= $this->owl_margin ?>,
+    stagePadding:<?= $this->owl_stagePadding ?>,
 
-    <?php if($this->merge): ?>
+    <?php if($this->owl_merge): ?>
       merge:true,
     <?php endif; ?>
-    <?php if(!$this->mergeFit): ?>
+    <?php if(!$this->owl_mergeFit): ?>
       mergeFit:false,    
     <?php endif; ?>
-    <?php if($this->autoWidth): ?>
+    <?php if($this->owl_autoWidth): ?>
       autoWidth:true,
     <?php endif; ?>
-    <?php if($this->autoheight): ?>
+    <?php if($this->owl_autoheight): ?>
       autoHeight:true,
     <?php endif; ?>
     
 
-    <?php if($this->rtl): ?>    
+    <?php if($this->owl_rtl): ?>    
       rtl:true,
     <?php endif; ?>
 
-    <?php if($this->smartSpeed): ?>
-      smartSpeed:<?= $this->smartSpeed ?>,
+    <?php if($this->owl_smartSpeed): ?>
+      smartSpeed:<?= $this->owl_smartSpeed ?>,
     <?php endif; ?> 
 
-    <?php if($this->lazyLoad): ?>
+    <?php if($this->owl_lazyLoad): ?>
       lazyLoad:true,
     <?php endif; ?>
 
-    <?php if($this->autoHeight): ?>
+    <?php if($this->owl_autoHeight): ?>
       autoHeight:true,
     <?php endif; ?>
     
-    <?php if($this->nav): ?>
+    <?php if($this->owl_nav): ?>
       nav:true,
-      navText:['<?= $this->navText_next ?>','<?= $this->navText_prev ?>'],
-      <?php if($this->navSpeed): ?>
-        navSpeed:<?= $this->navSpeed ?>,
+      navText:['<?= $this->owl_navText_next ?>','<?= $this->owl_navText_prev ?>'],
+      <?php if($this->owl_navSpeed): ?>
+        navSpeed:<?= $this->owl_navSpeed ?>,
       <?php endif; ?>
-      <?php if($this->slideBy): ?>
+      <?php if($this->owl_slideBy): ?>
         slideBy:true,
       <?php endif; ?>
     <?php endif; ?>
 
-    <?php if($this->dots): ?> 
+    <?php if($this->owl_dots): ?> 
       dots:true,
-      dotsEach:<?= $this->dotsEach ?>,
-      <?php if($this->dotsSpeed): ?>
-        dotsSpeed:<?= $this->dotsSpeed ?>,
+      dotsEach:<?= $this->owl_dotsEach ?>,
+      <?php if($this->owl_dotsSpeed): ?>
+        dotsSpeed:<?= $this->owl_dotsSpeed ?>,
       <?php endif; ?>
     <?php else: ?> 
       dots:false,
     <?php endif; ?>
     
-    <?php if($this->autoplay): ?>    
+    <?php if($this->owl_autoplay): ?>    
       autoplay:true,
-      <?php if($this->autoplaySpeed): ?>
-        autoplayTimeout:<?= $this->autoplayTimeout ?>,
+      <?php if($this->owl_autoplaySpeed): ?>
+        autoplayTimeout:<?= $this->owl_autoplayTimeout ?>,
       <?php endif; ?>
-      <?php if($this->autoplayHoverPause): ?>
+      <?php if($this->owl_autoplayHoverPause): ?>
         autoplayHoverPause:true,
       <?php endif; ?>      
-      <?php if($this->autoplaySpeed): ?>
-        autoplaySpeed:<?= $this->autoplaySpeed ?>,
+      <?php if($this->owl_autoplaySpeed): ?>
+        autoplaySpeed:<?= $this->owl_autoplaySpeed ?>,
       <?php endif; ?>      
     <?php endif; ?>
 
-    <?php if($this->animateIn && $this->itmes==1): ?>
-      animateIn:'<?= $this->animateIn ?>',
+    <?php if($this->owl_animateIn && $this->owl_itmes==1): ?>
+      animateIn:'<?= $this->owl_animateIn ?>',
     <?php endif; ?>
-    <?php if($this->animateOut && $this->itmes==1): ?>
-      animateOut:'<?= $this->animateOut ?>',
+    <?php if($this->owl_animateOut && $this->owl_itmes==1): ?>
+      animateOut:'<?= $this->owl_animateOut ?>',
     <?php endif; ?>
     
   })
