@@ -55,13 +55,13 @@ class ModuleOwlCarousel extends \Module
 
 		if (TL_MODE == 'FE')
 		{
-            $GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/owlcarousel/assets/js/owl.carousel.min.js|static';
-            $GLOBALS['TL_CSS'][] = 'system/modules/owlcarousel/assets/css/owl.carousel.min.css|static';
-			$GLOBALS['TL_CSS'][] = 'system/modules/owlcarousel/assets/css/owl.theme.default.min.css|static';
+            $GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/owlcarousel/assets/vendor/OwlCarousel2/OwlCarousel2/owl.carousel.min.js|static';
+            $GLOBALS['TL_CSS'][] = 'system/modules/owlcarousel/assets/vendor/OwlCarousel2/OwlCarousel2/assets/owl.carousel.min.css|static';
+			$GLOBALS['TL_CSS'][] = 'system/modules/owlcarousel/assets/vendor/OwlCarousel2/OwlCarousel2/assets/owl.theme.default.min.css|static';
 
 			if(($this->animateIn || $this->animateOut) && $this->items==1)			
 			{
-				$GLOBALS['TL_CSS'][] = 'system/modules/owlcarousel/assets/css/animate.min.css|static';
+				$GLOBALS['TL_CSS'][] = 'system/modules/owlcarousel/assets/vendor/daneden/animate.css/animate.min.css|static';
 			}
         }
 
