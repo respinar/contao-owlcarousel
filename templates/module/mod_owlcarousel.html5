@@ -65,7 +65,7 @@
         navSpeed:<?= $this->owl_navSpeed ?>,
       <?php endif; ?>
       <?php if($this->owl_slideBy): ?>
-        slideBy:true,
+        slideBy:<?= $this->owl_slideBy ?>,
       <?php endif; ?>
     <?php endif; ?>
 
