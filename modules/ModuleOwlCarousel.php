@@ -1,0 +1,168 @@
+<?php
+
+/**
+ * Owlcarousel Extension for Contao Open Source CMS
+ *
+ * @copyright  Copyright (c) 2017, Respinar
+ * @author     Respinar <info@respinar.com>
+ * @license    http://opensource.org/licenses/lgpl-3.0.html LGPL
+ * @link       https://respinar.com/
+ */
+
+
+/**
+ * Namespace
+ */
+namespace OwlCarousel;
+
+
+/**
+ * Class ModuleOwlCarousel
+ */
+class ModuleOwlCarousel extends \Module
+{
+
+	/**
+	 * Template
+	 * @var string
+	 */
+	protected $strTemplate = 'mod_owlcarousel';
+
+	/**
+	 * Display a wildcard in the back end
+	 * @return string
+	 */
+	public function generate()
+	{
+		if (TL_MODE == 'BE')
+		{
+			$objTemplate = new \BackendTemplate('be_wildcard');
+
+			$objTemplate->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['FMD']['owlcarousel'][0]) . ' ###';
+			$objTemplate->title = $this->headline;
+			$objTemplate->id = $this->id;
+			$objTemplate->link = $this->name;
+			$objTemplate->href = 'contao/main.php?do=themes&amp;table=tl_module&amp;act=edit&amp;id=' . $this->id;
+
+			return $objTemplate->parse();
+		}		
+
+		// No catalog categries available
+		if (!isset($this->owlcarousel))
+		{
+			return '';
+		}
+
+		if (TL_MODE == 'FE')
+		{
+            $GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/owlcarousel/assets/js/owl.carousel.min.js|static';
+            $GLOBALS['TL_CSS'][] = 'system/modules/owlcarousel/assets/css/owl.carousel.min.css|static';
+			$GLOBALS['TL_CSS'][] = 'system/modules/owlcarousel/assets/css/owl.theme.default.min.css|static';
+
+			if(($this->animateIn || $this->animateOut) && $this->items==1)			
+			{
+				$GLOBALS['TL_CSS'][] = 'system/modules/owlcarousel/assets/css/animate.min.css|static';
+			}
+        }
+
+		return parent::generate();
+	}
+
+
+	/**
+	 * Generate the module
+	 */
+	protected function compile()
+	{		
+
+		$intTotal = \OwlCarouselSlideModel::countPublishedByPid($this->owlcarousel);
+
+		if ($intTotal < 1)
+		{
+			$this->Template->empty = $GLOBALS['TL_LANG']['MSC']['noSlide'];
+			
+			return;
+		}
+
+		$objSlides = \OwlCarouselSlideModel::findPublishedByPid($this->owlcarousel);
+
+		// No items found
+		if ($objSlides !== null)
+		{
+			$this->Template->slides = $this->parseSlides($objSlides);
+		}
+
+	}
+
+	protected function parseSlides($objSlides)
+	{
+		$limit = $objSlides->count();
+
+		if ($limit < 1)
+		{
+			return array();
+		}
+
+		$count = 0;
+		$arrSlides = array();
+
+		while ($objSlides->next())
+		{
+			$arrSlides[] = $this->parseSlide($objSlides, ((++$count == 1) ? ' first' : '') . (($count == $limit) ? ' last' : '') . ((($count % 2) == 0) ? ' odd' : ' even'), $count);
+		}
+
+		return $arrSlides;
+	}
+
+
+	protected function parseSlide($objSlide, $strClass='', $intCount=0)
+	{
+
+		$objTemplate = new \FrontendTemplate($this->slide_template);
+
+		$objTemplate->setData($objSlide->row());
+
+		$objTemplate->addImage = false;
+
+		// Add an image
+		if ($objSlide->singleSRC != '')
+		{
+			$objModel = \FilesModel::findByUuid($objSlide->singleSRC);
+
+			if ($objModel === null)
+			{
+				if (!\Validator::isUuid($objSlide->singleSRC))
+				{
+					$objTemplate->text = '<p class="error">'.$GLOBALS['TL_LANG']['ERR']['version2format'].'</p>';
+				}
+			}
+			elseif (is_file(TL_ROOT . '/' . $objModel->path))
+			{
+				// Do not override the field now that we have a model registry (see #6303)
+				$arrLink = $objSlide->row();
+
+				// Override the default image size
+				if ($this->imgSize != '')
+				{
+					$size = deserialize($this->imgSize);
+
+					if ($size[0] > 0 || $size[1] > 0 || is_numeric($size[2]))
+					{
+						$arrLink['size'] = $this->imgSize;
+					}
+				}
+
+				$arrLink['singleSRC'] = $objModel->path;				
+				$this->addImageToTemplate($objTemplate, $arrLink);
+			}
+		}		
+
+		$objTemplate->class     = $strClass;
+		$objTemplate->hrefclass = $objSlide->class;
+		$objTemplate->linkTitle = $objSlide->title ? $objSlide->title : $objSlide->title;
+
+		return $objTemplate->parse();
+
+	}
+
+}

@@ -1,0 +1,103 @@
+
+<div class="<?php echo $this->class ?> block"<?php echo $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+
+  <div class="owl-carousel owl-theme">
+    <?php if (empty($this->slides)): ?>
+      <p class="noslide"><?= $this->empty; ?></p>
+    <?php else: ?>    
+      <?php echo implode('', $this->slides); ?>    
+    <?php endif; ?>
+  </div>
+
+</div>
+
+<script>
+  $('.owl-carousel').owlCarousel({
+
+    items:<?= $this->items ?>,
+    <?php if($this->infinityLoop): ?>    
+      loop:true,
+    <?php endif; ?>    
+    <?php if($this->center): ?> 
+      center:true,
+    <?php endif; ?> 
+    <?php if($this->rewind): ?> 
+      rewind:true,
+    <?php endif; ?>      
+
+    margin:<?= $this->margin ?>,
+    stagePadding:<?= $this->stagePadding ?>,
+
+    <?php if($this->merge): ?>
+      merge:true,
+    <?php endif; ?>
+    <?php if(!$this->mergeFit): ?>
+      mergeFit:false,    
+    <?php endif; ?>
+    <?php if($this->autoWidth): ?>
+      autoWidth:true,
+    <?php endif; ?>
+    <?php if($this->autoheight): ?>
+      autoHeight:true,
+    <?php endif; ?>
+    
+
+    <?php if($this->rtl): ?>    
+      rtl:true,
+    <?php endif; ?>
+
+    <?php if($this->smartSpeed): ?>
+      smartSpeed:<?= $this->smartSpeed ?>,
+    <?php endif; ?> 
+
+    <?php if($this->lazyLoad): ?>
+      lazyLoad:true,
+    <?php endif; ?>
+
+    <?php if($this->autoHeight): ?>
+      autoHeight:true,
+    <?php endif; ?>
+    
+    <?php if($this->nav): ?>
+      nav:true,
+      navText:['<?= $this->navText_next ?>','<?= $this->navText_prev ?>'],
+      <?php if($this->navSpeed): ?>
+        navSpeed:<?= $this->navSpeed ?>,
+      <?php endif; ?>
+      <?php if($this->slideBy): ?>
+        slideBy:true,
+      <?php endif; ?>
+    <?php endif; ?>
+
+    <?php if($this->dots): ?> 
+      dots:true,
+      dotsEach:<?= $this->dotsEach ?>,
+      <?php if($this->dotsSpeed): ?>
+        dotsSpeed:<?= $this->dotsSpeed ?>,
+      <?php endif; ?>
+    <?php else: ?> 
+      dots:false,
+    <?php endif; ?>
+    
+    <?php if($this->autoplay): ?>    
+      autoplay:true,
+      <?php if($this->autoplaySpeed): ?>
+        autoplayTimeout:<?= $this->autoplayTimeout ?>,
+      <?php endif; ?>
+      <?php if($this->autoplayHoverPause): ?>
+        autoplayHoverPause:true,
+      <?php endif; ?>      
+      <?php if($this->autoplaySpeed): ?>
+        autoplaySpeed:<?= $this->autoplaySpeed ?>,
+      <?php endif; ?>      
+    <?php endif; ?>
+
+    <?php if($this->animateIn && $this->itmes==1): ?>
+      animateIn:'<?= $this->animateIn ?>',
+    <?php endif; ?>
+    <?php if($this->animateOut && $this->itmes==1): ?>
+      animateOut:'<?= $this->animateOut ?>',
+    <?php endif; ?>
+    
+  })
+</script>

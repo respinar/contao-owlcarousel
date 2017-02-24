@@ -1,0 +1,9 @@
+<div class="item" <?php if($this->style): ?> style="<?= $this->style ?>" <?php endif; ?> <?php if($this->data_merge): ?> data-merge="<?= $this->data_merge ?>" <?php endif; ?> >
+    <figure class="image_container">
+ 
+      <?php $this->insert('picture_default', $this->picture); ?>
+
+      <div class="text"><?= $this->text; ?></div>
+
+  </figure>
+</div>

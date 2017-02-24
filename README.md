@@ -1,4 +1,4 @@
-owlcarousel
+Owl Carousel Extension for Contao Open Source CMS
 ===========
 
-Owl Carousel for Contao
+Owl Carousel Extension for Contao Open Source CMS
