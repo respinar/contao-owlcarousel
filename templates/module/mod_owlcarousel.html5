@@ -60,7 +60,10 @@
     
     <?php if($this->owl_nav): ?>
       nav:true,
-      navText:['<?= $this->owl_navText_next ?>','<?= $this->owl_navText_prev ?>'],
+      <?php if($this->owl_navText): ?>
+      <?php $owl_navText = deserialize($this->owl_navText); ?>
+      navText:['<?= $owl_navText[1] ?>','<?= $owl_navText[0] ?>'],
+      <?php endif; ?>
       <?php if($this->owl_navSpeed): ?>
         navSpeed:<?= $this->owl_navSpeed ?>,
       <?php endif; ?>

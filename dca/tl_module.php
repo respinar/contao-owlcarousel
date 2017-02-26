@@ -12,10 +12,10 @@
 /**
  * Add palettes to tl_module
  */
-$GLOBALS['TL_DCA']['tl_module']['palettes']['owlcarousel']   = '{title_legend},name,headline,type;{owlcarousel_legend},owl_carousel;{template_legend},owl_slide_template,customTpl;{owl_options_legend},owl_items,owl_smartSpeed,owl_margin,owl_stagePadding,owl_loop,owl_rewind,owl_rtl,owl_center,owl_lazyLoad;{owl_merge_legend},owl_merge,owl_mergeFit,owl_autoWidth,owl_autoHeight;{owl_nav_legend},owl_nav;{owl_dots_legend},owl_dots;{owl_autoplay_legend},owl_autoplay;{owl_animate_legend:hide},owl_animateIn,owl_animateOut;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['owlcarousel']   = '{title_legend},name,headline,type;{owlcarousel_legend},owl_carousel;{template_legend},owl_slide_template,customTpl,imgSize;{owl_options_legend},owl_items,owl_slideBy,owl_margin,owl_stagePadding,owl_smartSpeed,owl_loop,owl_rewind,owl_rtl,owl_center,owl_lazyLoad;{owl_merge_legend},owl_merge,owl_mergeFit,owl_autoWidth,owl_autoHeight;{owl_nav_legend},owl_nav;{owl_dots_legend},owl_dots;{owl_autoplay_legend},owl_autoplay;{owl_animate_legend:hide},owl_animateIn,owl_animateOut;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
 
 $GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'owl_nav';
-$GLOBALS['TL_DCA']['tl_module']['subpalettes']['owl_nav'] = 'owl_navText_prev,owl_navText_next,owl_navSpeed,owl_slideBy';
+$GLOBALS['TL_DCA']['tl_module']['subpalettes']['owl_nav'] = 'owl_navText,owl_navSpeed';
 
 $GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'owl_dots';
 $GLOBALS['TL_DCA']['tl_module']['subpalettes']['owl_dots'] = 'owl_dotsEach,owl_dotsSpeed';
@@ -79,7 +79,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['owl_loop'] = array
 	'exclude'                 => true,
 	'default'                 => true,
 	'inputType'               => 'checkbox',
-	'eval'                    => array('tl_class'=>'w50'),
+	'eval'                    => array('tl_class'=>'w50 m12'),
 	'sql'                     => "char(1) NOT NULL default ''"
 );
 
@@ -164,25 +164,14 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['owl_rewind'] = array
 	'sql'                     => "char(1) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['owl_navText_prev'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['owl_navText'] = array
 (
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_navText_prev'],
+	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_navText'],
 	'exclude'                 => true,
 	'search'                  => true,
-	'default'                 => 'prev',
+	'default'                 => array('prev','next'),
 	'inputType'               => 'text',
-	'eval'                    => array('maxlength'=>64, 'tl_class'=>'w50 clr'),
-	'sql'                     => "varchar(64) NOT NULL default ''"
-);
-
-$GLOBALS['TL_DCA']['tl_module']['fields']['owl_navText_next'] = array
-(
-	'label'                   => &$GLOBALS['TL_LANG']['tl_module']['owl_navText_next'],
-	'exclude'                 => true,
-	'search'                  => true,
-	'default'                 => 'next',
-	'inputType'               => 'text',
-	'eval'                    => array('maxlength'=>64, 'tl_class'=>'w50'),
+	'eval'                    => array('maxlength'=>64,'multiple'=>true,'size'=>2, 'tl_class'=>'w50 clr'),
 	'sql'                     => "varchar(64) NOT NULL default ''"
 );
 

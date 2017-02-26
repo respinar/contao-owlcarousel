@@ -111,7 +111,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel_slide'] = array
 	'palettes' => array
 	(
 		'__selector__'                => array('published'),
-		'default'                     => '{title_legend},title;{image_legend},singleSRC,alt;{text_legend},text;{option_legend},style,data_merge;{publish_legend},published'
+		'default'                     => '{title_legend},title;{image_legend},singleSRC,alt,size,imageUrl;{text_legend},text;{option_legend},style,data_merge;{publish_legend},published'
 	),
 
 	// Subpalettes
@@ -173,6 +173,29 @@ $GLOBALS['TL_DCA']['tl_owlcarousel_slide'] = array
 			'eval'                    => array('maxlength'=>255, 'tl_class'=>'long clr'),
 			'sql'                     => "varchar(255) NOT NULL default ''"
 		),	
+		'size' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_content']['size'],
+			'exclude'                 => true,
+			'inputType'               => 'imageSize',
+			'options'                 => System::getImageSizes(),
+			'reference'               => &$GLOBALS['TL_LANG']['MSC'],
+			'eval'                    => array('rgxp'=>'natural', 'includeBlankOption'=>true, 'nospace'=>true, 'helpwizard'=>true, 'tl_class'=>'w50'),
+			'sql'                     => "varchar(64) NOT NULL default ''"
+		),
+		'imageUrl' => array
+		(
+			'label'                   => &$GLOBALS['TL_LANG']['tl_content']['imageUrl'],
+			'exclude'                 => true,
+			'search'                  => true,
+			'inputType'               => 'text',
+			'eval'                    => array('rgxp'=>'url', 'decodeEntities'=>true, 'maxlength'=>255, 'fieldType'=>'radio', 'filesOnly'=>true, 'tl_class'=>'w50 wizard'),
+			'wizard' => array
+			(
+				array('tl_owlcarousel_slide', 'pagePicker')
+			),
+			'sql'                     => "varchar(255) NOT NULL default ''"
+		),
 		'style' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel_slide']['style'],
@@ -181,7 +204,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel_slide'] = array
 			'inputType'               => 'text',
 			'eval'                    => array('maxlength'=>255, 'tl_class'=>'w50'),
 			'sql'                     => "varchar(255) NOT NULL default ''"
-		),
+		),		
 		'data_merge' => array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel_slide']['data_merge'],
@@ -242,6 +265,18 @@ class tl_owlcarousel_slide extends Backend
 		}
 
 		return '<div><div style="float:left; margin-right:10px;">'.$strImage.'</div>'.$arrRow['title'] . '</div>';
+	}
+
+	/**
+	 * Return the link picker wizard
+	 *
+	 * @param DataContainer $dc
+	 *
+	 * @return string
+	 */
+	public function pagePicker(DataContainer $dc)
+	{
+		return ' <a href="' . (($dc->value == '' || strpos($dc->value, '{{link_url::') !== false) ? 'contao/page.php' : 'contao/file.php') . '?do=' . Input::get('do') . '&amp;table=' . $dc->table . '&amp;field=' . $dc->field . '&amp;value=' . rawurlencode(str_replace(array('{{link_url::', '}}'), '', $dc->value)) . '&amp;switch=1' . '" title="' . specialchars($GLOBALS['TL_LANG']['MSC']['pagepicker']) . '" onclick="Backend.getScrollOffset();Backend.openModalSelector({\'width\':768,\'title\':\'' . specialchars(str_replace("'", "\\'", $GLOBALS['TL_DCA'][$dc->table]['fields'][$dc->field]['label'][0])) . '\',\'url\':this.href,\'id\':\'' . $dc->field . '\',\'tag\':\'ctrl_'. $dc->field . ((Input::get('act') == 'editAll') ? '_' . $dc->id : '') . '\',\'self\':this});return false">' . Image::getHtml('pickpage.gif', $GLOBALS['TL_LANG']['MSC']['pagepicker'], 'style="vertical-align:top;cursor:pointer"') . '</a>';
 	}
 
 

@@ -142,13 +142,19 @@ class ModuleOwlCarousel extends \Module
 				$arrSlide = $objSlide->row();
 
 				// Override the default image size
-				if ($this->imgSize != '')
+				if ($objSlide->size != '' || $this->imgSize != '')
 				{
-					$size = deserialize($this->imgSize);
+					if ( $this->imgSize != '')
+					{
+						$objSlide->size = $this->imgSize;
+					}
+
+					$size = deserialize($objSlide->size);
+
 
 					if ($size[0] > 0 || $size[1] > 0 || is_numeric($size[2]))
 					{
-						$arrSlide['size'] = $this->imgSize;
+						$arrSlide['size'] = $objSlide->size;
 					}
 				}
 
