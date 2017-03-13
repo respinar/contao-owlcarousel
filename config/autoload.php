@@ -15,7 +15,7 @@
  */
 ClassLoader::addNamespaces(array
 (
-	'OwlCarousel'
+	'Respinar\OwlCarousel'
 ));
 
 
@@ -25,14 +25,14 @@ ClassLoader::addNamespaces(array
 ClassLoader::addClasses(array
 (
 	// Modules
-	'OwlCarousel\ModuleOwlCarousel'     => 'system/modules/owlcarousel/modules/ModuleOwlCarousel.php',
+	'Respinar\OwlCarousel\ModuleOwlCarousel'     => 'system/modules/owlcarousel/library/Respinar/OwlCarousel/FrontendModules/ModuleOwlCarousel.php',
 
 	// Elements
-	'OwlCarousel\ContentOwlCarousel'    => 'system/modules/owlcarousel/elements/ContentOwlCarousel.php',
+	'Respinar\OwlCarousel\ContentOwlCarousel'    => 'system/modules/owlcarousel/library/Respinar/OwlCarousel/FrontendElements/ContentOwlCarousel.php',
 
 	// Models
-	'OwlCarousel\OwlCarouselModel'      => 'system/modules/owlcarousel/models/OwlCarouselModel.php',
-	'OwlCarousel\OwlCarouselSlideModel' => 'system/modules/owlcarousel/models/OwlCarouselSlideModel.php',
+	'Respinar\OwlCarousel\OwlCarouselModel'      => 'system/modules/owlcarousel/library/Respinar/OwlCarousel/Models/OwlCarouselModel.php',
+	'Respinar\OwlCarousel\OwlCarouselSlideModel' => 'system/modules/owlcarousel/library/Respinar/OwlCarousel/Models/OwlCarouselSlideModel.php',
 ));
 
 

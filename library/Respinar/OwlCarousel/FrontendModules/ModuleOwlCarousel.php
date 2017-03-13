@@ -13,20 +13,20 @@
 /**
  * Namespace
  */
-namespace OwlCarousel;
+namespace Respinar\OwlCarousel;
 
 
 /**
- * Class ContentOwlCarousel
+ * Class ModuleOwlCarousel
  */
-class ContentOwlCarousel extends \ContentElement
+class ModuleOwlCarousel extends \Module
 {
 
 	/**
 	 * Template
 	 * @var string
 	 */
-	protected $strTemplate = 'ce_owlcarousel';
+	protected $strTemplate = 'mod_owlcarousel';
 
 	/**
 	 * Display a wildcard in the back end
@@ -39,13 +39,10 @@ class ContentOwlCarousel extends \ContentElement
 			$objTemplate = new \BackendTemplate('be_wildcard');
 
 			$objTemplate->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['FMD']['owlcarousel'][0]) . ' ###';
-
-			$objOwlCarousel = \OwlCarouselModel::findBy('id',$this->owl_carousel);
-
 			$objTemplate->title = $this->headline;
-			$objTemplate->id = $this->owl_carousel;
-			$objTemplate->link = $objOwlCarousel->title;
-			$objTemplate->href = 'contao/main.php?do=owlcarousel&amp;table=tl_owlcarousel_slide&amp;id=' . $this->owl_carousel;
+			$objTemplate->id = $this->id;
+			$objTemplate->link = $this->name;
+			$objTemplate->href = 'contao/main.php?do=themes&amp;table=tl_module&amp;act=edit&amp;id=' . $this->id;
 
 			return $objTemplate->parse();
 		}		

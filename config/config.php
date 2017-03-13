@@ -21,9 +21,9 @@
 /**
  * Front end modules
  */
-$GLOBALS['FE_MOD']['application']['owlcarousel']   = 'ModuleOwlCarousel';
+$GLOBALS['FE_MOD']['application']['owlcarousel']   = 'Respinar\OwlCarousel\ModuleOwlCarousel';
 
 /**
  * Content elements
  */
-$GLOBALS['TL_CTE']['miscellaneous']['owlcarousel'] = 'ContentOwlCarousel';
+$GLOBALS['TL_CTE']['miscellaneous']['owlcarousel'] = 'Respinar\OwlCarousel\ContentOwlCarousel';

@@ -13,7 +13,7 @@
 /**
  * Namespace
  */
-namespace OwlCarousel;
+namespace Respinar\OwlCarousel;
 
 /**
  * Class OwlCarouselModel
