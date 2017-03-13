@@ -145,11 +145,11 @@ class ContentOwlCarousel extends \ContentElement
 				$arrSlide = $objSlide->row();
 
 				// Override the default image size
-				if ($objSlide->size != '' || $this->imgSize != '')
+				if ($objSlide->size != '' || $this->size != '')
 				{
-					if ( $this->imgSize != '')
+					if ( $this->size != '')
 					{
-						$objSlide->size = $this->imgSize;
+						$objSlide->size = $this->size;
 					}
 
 					$size = deserialize($objSlide->size);

@@ -9,6 +9,11 @@
  * @link       https://respinar.com/
  */
 
+/**
+ * Load tl_module language file
+ */
+\System::loadLanguageFile('tl_module');
+
  /**
  * Dynamically add the permission check and parent table
  */
@@ -22,7 +27,7 @@ if (Input::get('do') == 'owlcarousel')
 /**
  * Add palettes to tl_content
  */
-$GLOBALS['TL_DCA']['tl_content']['palettes']['owlcarousel']   = '{title_legend},name,headline,type;{owlcarousel_legend},owl_carousel;{template_legend},owl_slide_template,customTpl,imgSize;{owl_options_legend},owl_items,owl_slideBy,owl_margin,owl_stagePadding,owl_smartSpeed,owl_loop,owl_rewind,owl_rtl,owl_center,owl_lazyLoad;{owl_merge_legend},owl_merge,owl_mergeFit,owl_autoWidth,owl_autoHeight;{owl_nav_legend},owl_nav;{owl_dots_legend},owl_dots;{owl_autoplay_legend},owl_autoplay;{owl_animate_legend:hide},owl_animateIn,owl_animateOut;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['owlcarousel']   = '{title_legend},name,headline,type;{owlcarousel_legend},owl_carousel;{template_legend},owl_slide_template,customTpl,size;{owl_options_legend},owl_items,owl_slideBy,owl_margin,owl_stagePadding,owl_smartSpeed,owl_loop,owl_rewind,owl_rtl,owl_center,owl_lazyLoad;{owl_merge_legend},owl_merge,owl_mergeFit,owl_autoWidth,owl_autoHeight;{owl_nav_legend},owl_nav;{owl_dots_legend},owl_dots;{owl_autoplay_legend},owl_autoplay;{owl_animate_legend:hide},owl_animateIn,owl_animateOut;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['__selector__'][] = 'owl_nav';
 $GLOBALS['TL_DCA']['tl_content']['subpalettes']['owl_nav'] = 'owl_navText,owl_navSpeed';
