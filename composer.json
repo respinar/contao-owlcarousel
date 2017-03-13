@@ -21,7 +21,7 @@
         "contao/core": ">=3.2,<4-dev",
         "contao-community-alliance/composer-plugin": "~2.0"
     },
-     "autoload": {
+    "autoload": {
         "psr-0": {
             "Respinar\\OwlCarousel\\": "library/"
         }
