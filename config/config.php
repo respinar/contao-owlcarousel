@@ -13,7 +13,7 @@
 (
 	'owlcarousel' => array
 	(
-		'tables' => array('tl_owlcarousel', 'tl_owlcarousel_slide'),
+		'tables' => array('tl_owlcarousel', 'tl_owlcarousel_slide', 'tl_content'),
 		'icon'   => 'system/modules/owlcarousel/assets/icon.png'
 	)
 ));
@@ -21,4 +21,9 @@
 /**
  * Front end modules
  */
-$GLOBALS['FE_MOD']['miscellaneous']['owlcarousel']   = 'ModuleOwlCarousel';
+$GLOBALS['FE_MOD']['application']['owlcarousel']   = 'ModuleOwlCarousel';
+
+/**
+ * Content elements
+ */
+$GLOBALS['TL_CTE']['miscellaneous']['owlcarousel'] = 'ContentOwlCarousel';

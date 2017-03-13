@@ -10,6 +10,8 @@
     <?php endif; ?>
   </div>
 
+</div>
+
 <script>
   $('.owl-carousel').owlCarousel({
 
