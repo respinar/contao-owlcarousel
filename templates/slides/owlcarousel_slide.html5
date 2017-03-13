@@ -1,9 +1,18 @@
 <div class="item" <?php if($this->style): ?> style="<?= $this->style ?>" <?php endif; ?> <?php if($this->data_merge): ?> data-merge="<?= $this->data_merge ?>" <?php endif; ?> >
     <figure class="image_container">
+
+    <?php if ($this->href): ?>
+      <a href="<?= $this->href ?>"<?php if ($this->linkTitle): ?> title="<?= $this->linkTitle ?>"<?php endif; ?><?= $this->attributes ?>>
+    <?php endif; ?>
  
       <?php $this->insert('picture_default', $this->picture); ?>
+
+     <?php if ($this->href): ?>
+      </a>
+    <?php endif; ?>
 
       <div class="description"><?= $this->description; ?></div>
 
   </figure>
 </div>
+   
