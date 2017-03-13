@@ -161,7 +161,17 @@ class ModuleOwlCarousel extends \Module
 				$arrSlide['singleSRC'] = $objModel->path;				
 				$this->addImageToTemplate($objTemplate, $arrSlide);
 			}
-		}		
+		}
+
+		$objElement = \ContentModel::findPublishedByPidAndTable($objSlide->id, 'tl_owlcarousel_slide');
+
+		if ($objElement !== null)
+		{
+			while ($objElement->next())
+			{
+				$objTemplate->text .= $this->getContentElement($objElement->current());
+			}			
+		}
 
 		$objTemplate->class     = $strClass;
 		$objTemplate->hrefclass = $objSlide->class;

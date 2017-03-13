@@ -27,6 +27,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel_slide'] = array
 	(
 		'dataContainer'               => 'Table',
 		'ptable'                      => 'tl_owlcarousel',
+		'ctable'                      => array('tl_content'),
 		'enableVersioning'            => true,
 		'sql' => array
 		(
@@ -63,8 +64,14 @@ $GLOBALS['TL_DCA']['tl_owlcarousel_slide'] = array
 			'edit' => array
 			(
 				'label'               => &$GLOBALS['TL_LANG']['tl_owlcarousel_slide']['edit'],
-				'href'                => 'act=edit',
+				'href'                => 'table=tl_content',
 				'icon'                => 'edit.gif'
+			),
+			'editheader' => array
+			(
+				'label'               => &$GLOBALS['TL_LANG']['tl_owlcarousel_slide']['edit'],
+				'href'                => 'act=edit',
+				'icon'                => 'header.gif'
 			),
 			'copy' => array
 			(
@@ -111,7 +118,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel_slide'] = array
 	'palettes' => array
 	(
 		'__selector__'                => array('published'),
-		'default'                     => '{title_legend},title;{image_legend},singleSRC,alt,size,imageUrl;{text_legend},text;{option_legend},style,data_merge;{publish_legend},published'
+		'default'                     => '{title_legend},title;{image_legend},singleSRC,alt,size,imageUrl;{description_legend},description;{option_legend},style,data_merge;{publish_legend},published'
 	),
 
 	// Subpalettes
@@ -147,9 +154,9 @@ $GLOBALS['TL_DCA']['tl_owlcarousel_slide'] = array
 			'eval'                    => array('mandatory'=>true, 'maxlength'=>255),
 			'sql'                     => "varchar(255) NOT NULL default ''"
 		),
-		'text' => array
+		'description' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel_slide']['text'],
+			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel_slide']['description'],
 			'exclude'                 => true,
 			'search'                  => true,
 			'inputType'               => 'textarea',
