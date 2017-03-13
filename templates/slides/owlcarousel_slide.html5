@@ -3,7 +3,7 @@
  
       <?php $this->insert('picture_default', $this->picture); ?>
 
-      <div class="text"><?= $this->text; ?></div>
+      <div class="description"><?= $this->description; ?></div>
 
   </figure>
 </div>
