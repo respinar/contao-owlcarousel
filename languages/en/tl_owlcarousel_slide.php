@@ -14,7 +14,7 @@
  * Fields
  */
 $GLOBALS['TL_LANG']['tl_owlcarousel_slide']['title']          = array('Slide title','Please enter the slide title.');
-$GLOBALS['TL_LANG']['tl_owlcarousel_slide']['text']           = array('Text','The text is added to slide.');
+$GLOBALS['TL_LANG']['tl_owlcarousel_slide']['description']    = array('Description','The text is added to slide.');
 $GLOBALS['TL_LANG']['tl_owlcarousel_slide']['style']          = array('CSS style','The CSS style is added in the HTML markup.');
 $GLOBALS['TL_LANG']['tl_owlcarousel_slide']['data_merge']     = array('data merge','');
 $GLOBALS['TL_LANG']['tl_owlcarousel_slide']['published']      = array('Publish slide','Make the slide publicly visible on the website.');
@@ -25,7 +25,7 @@ $GLOBALS['TL_LANG']['tl_owlcarousel_slide']['stop']           = array('Show unti
 /**
  * Legends
  */
-$GLOBALS['TL_LANG']['tl_owlcarousel_slide']['text_legend']    = 'Text';
+$GLOBALS['TL_LANG']['tl_owlcarousel_slide']['description_legend'] = 'Description';
 $GLOBALS['TL_LANG']['tl_owlcarousel_slide']['image_legend']   = 'Image settings';
 $GLOBALS['TL_LANG']['tl_owlcarousel_slide']['title_legend']   = 'Title';
 $GLOBALS['TL_LANG']['tl_owlcarousel_slide']['publish_legend'] = 'Publish Settings';
