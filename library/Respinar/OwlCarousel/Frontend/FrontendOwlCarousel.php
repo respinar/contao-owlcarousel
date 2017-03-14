@@ -19,7 +19,7 @@ namespace Respinar\OwlCarousel;
 /**
  * Class OwlCarousel
  */
-class OwlCarousel extends \Frontend
+class FrontendOwlCarousel extends \Frontend
 {
 
 	public function parseSlides($objSlides)

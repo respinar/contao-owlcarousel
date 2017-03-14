@@ -89,7 +89,7 @@ class ModuleOwlCarousel extends \Module
 		// No items found
 		if ($objSlides !== null)
 		{
-			$OwlCarousel = new OwlCarousel();
+			$OwlCarousel = new FrontendOwlCarousel();
 
 			$OwlCarousel->owl_slide_template = $this->owl_slide_template;
 			$OwlCarousel->imgSize = $this->imgSize;

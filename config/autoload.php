@@ -26,13 +26,13 @@ ClassLoader::addClasses(array
 (
 
 	// Classes
-	'Respinar\OwlCarousel\OwlCarousel'           => 'system/modules/owlcarousel/library/Respinar/OwlCarousel/OwlCarousel.php',
+	'Respinar\OwlCarousel\FrontendOwlCarousel'   => 'system/modules/owlcarousel/library/Respinar/OwlCarousel/Frontend/FrontendOwlCarousel.php',
 
 	// Modules
-	'Respinar\OwlCarousel\ModuleOwlCarousel'     => 'system/modules/owlcarousel/library/Respinar/OwlCarousel/FrontendModules/ModuleOwlCarousel.php',
+	'Respinar\OwlCarousel\ModuleOwlCarousel'     => 'system/modules/owlcarousel/library/Respinar/OwlCarousel/Frontend/Modules/ModuleOwlCarousel.php',
 
 	// Elements
-	'Respinar\OwlCarousel\ContentOwlCarousel'    => 'system/modules/owlcarousel/library/Respinar/OwlCarousel/FrontendElements/ContentOwlCarousel.php',
+	'Respinar\OwlCarousel\ContentOwlCarousel'    => 'system/modules/owlcarousel/library/Respinar/OwlCarousel/Frontend/Elements/ContentOwlCarousel.php',
 
 	// Models
 	'Respinar\OwlCarousel\OwlCarouselModel'      => 'system/modules/owlcarousel/library/Respinar/OwlCarousel/Models/OwlCarouselModel.php',
