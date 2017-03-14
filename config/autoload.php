@@ -24,6 +24,10 @@ ClassLoader::addNamespaces(array
  */
 ClassLoader::addClasses(array
 (
+
+	// Classes
+	'Respinar\OwlCarousel\OwlCarousel'           => 'system/modules/owlcarousel/library/Respinar/OwlCarousel/OwlCarousel.php',
+
 	// Modules
 	'Respinar\OwlCarousel\ModuleOwlCarousel'     => 'system/modules/owlcarousel/library/Respinar/OwlCarousel/FrontendModules/ModuleOwlCarousel.php',
 
