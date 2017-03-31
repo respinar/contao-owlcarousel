@@ -87,6 +87,9 @@ class ContentOwlCarousel extends \ContentElement
 			return;
 		}
 
+		$objOwlCarousel = \OwlCarouselModel::findBy('id',$this->owl_carousel);
+		$this->Template->setData($objOwlCarousel->row());
+
 		$objSlides = \OwlCarouselSlideModel::findPublishedByPid($this->owl_carousel);
 
 		// No items found
