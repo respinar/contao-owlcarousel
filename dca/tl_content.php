@@ -22,7 +22,7 @@ if (Input::get('do') == 'owlcarousel')
 /**
  * Add palettes to tl_content
  */
-$GLOBALS['TL_DCA']['tl_content']['palettes']['owlcarousel']   = '{title_legend},name,headline,type;{owlcarousel_legend},owl_carousel;{template_legend},owl_slide_template,customTpl,size;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['owlcarousel']   = '{title_legend},type,headline;{owlcarousel_legend},owl_carousel;{template_legend},owl_slide_template,customTpl,size;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
 
 
 /**
