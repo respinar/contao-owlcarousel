@@ -20,3 +20,9 @@ $GLOBALS['TL_LANG']['MOD']['owlcarousel'] = array('Owl Carousel', 'Manage Carous
  * Front end modules
  */
 $GLOBALS['TL_LANG']['FMD']['owlcarousel'] = array('Owl Carousel', 'Adds a Carousel to the website.');
+
+
+/**
+ * Front end content elements
+ */
+$GLOBALS['TL_LANG']['CTE']['owlcarousel'] = array('Owl Carousel', 'Adds a Carousel to the website.');
