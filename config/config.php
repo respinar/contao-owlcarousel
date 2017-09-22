@@ -19,11 +19,17 @@
 ));
 
 /**
+ * Register models
+ */
+ $GLOBALS['TL_MODELS']['tl_owlcarousel']       = 'Respinar\OwlCarousel\Model\OwlCarouselModel';
+ $GLOBALS['TL_MODELS']['tl_owlcarousel_slide'] = 'Respinar\OwlCarousel\Model\OwlCarouselSlideModel'; 
+
+/**
  * Front end modules
  */
-$GLOBALS['FE_MOD']['application']['owlcarousel']   = 'Respinar\OwlCarousel\ModuleOwlCarousel';
+$GLOBALS['FE_MOD']['application']['owlcarousel']   = 'Respinar\OwlCarousel\Frontend\Module\ModuleOwlCarousel';
 
 /**
  * Content elements
  */
-$GLOBALS['TL_CTE']['miscellaneous']['owlcarousel'] = 'Respinar\OwlCarousel\ContentOwlCarousel';
+$GLOBALS['TL_CTE']['miscellaneous']['owlcarousel'] = 'Respinar\OwlCarousel\Frontend\Element\ContentOwlCarousel';
