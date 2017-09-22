@@ -13,7 +13,11 @@
 /**
  * Namespace
  */
-namespace Respinar\OwlCarousel;
+namespace Respinar\OwlCarousel\Frontend\Element;
+
+use Respinar\OwlCarousel\Model\OwlCarouselModel;
+use Respinar\OwlCarousel\Model\OwlCarouselSlideModel;
+use Respinar\OwlCarousel\Frontend\FrontendOwlCarousel;
 
 
 /**
@@ -40,7 +44,7 @@ class ContentOwlCarousel extends \ContentElement
 
 			$objTemplate->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['FMD']['owlcarousel'][0]) . ' ###';
 
-			$objOwlCarousel = \OwlCarouselModel::findBy('id',$this->owl_carousel);
+			$objOwlCarousel = OwlCarouselModel::findBy('id',$this->owl_carousel);
 
 			$objTemplate->title = $this->headline;
 			$objTemplate->id = $this->owl_carousel;
@@ -78,7 +82,7 @@ class ContentOwlCarousel extends \ContentElement
 	protected function compile()
 	{
 
-		$intTotal = \OwlCarouselSlideModel::countPublishedByPid($this->owl_carousel);
+		$intTotal = OwlCarouselSlideModel::countPublishedByPid($this->owl_carousel);
 
 		if ($intTotal < 1)
 		{
@@ -87,10 +91,10 @@ class ContentOwlCarousel extends \ContentElement
 			return;
 		}
 
-		$objOwlCarousel = \OwlCarouselModel::findBy('id',$this->owl_carousel);
+		$objOwlCarousel = OwlCarouselModel::findBy('id',$this->owl_carousel);
 		$this->Template->setData($objOwlCarousel->row());
 
-		$objSlides = \OwlCarouselSlideModel::findPublishedByPid($this->owl_carousel);
+		$objSlides = OwlCarouselSlideModel::findPublishedByPid($this->owl_carousel);
 
 		// No items found
 		if ($objSlides !== null)

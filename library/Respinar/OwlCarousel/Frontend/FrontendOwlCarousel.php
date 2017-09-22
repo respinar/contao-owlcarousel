@@ -13,7 +13,7 @@
 /**
  * Namespace
  */
-namespace Respinar\OwlCarousel;
+namespace Respinar\OwlCarousel\Frontend;
 
 
 /**

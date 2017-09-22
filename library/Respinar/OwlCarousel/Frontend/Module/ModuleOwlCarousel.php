@@ -13,8 +13,11 @@
 /**
  * Namespace
  */
-namespace Respinar\OwlCarousel;
+namespace Respinar\OwlCarousel\Frontend\Module;
 
+use Respinar\OwlCarousel\Model\OwlCarouselModel;
+use Respinar\OwlCarousel\Model\OwlCarouselSlideModel;
+use Respinar\OwlCarousel\Frontend\FrontendOwlCarousel;
 
 /**
  * Class ModuleOwlCarousel
@@ -75,7 +78,7 @@ class ModuleOwlCarousel extends \Module
 	protected function compile()
 	{
 
-		$intTotal = \OwlCarouselSlideModel::countPublishedByPid($this->owl_carousel);
+		$intTotal = OwlCarouselSlideModel::countPublishedByPid($this->owl_carousel);
 
 		if ($intTotal < 1)
 		{
@@ -84,10 +87,10 @@ class ModuleOwlCarousel extends \Module
 			return;
 		}
 
-		$objOwlCarousel = \OwlCarouselModel::findBy('id',$this->owl_carousel);
+		$objOwlCarousel = OwlCarouselModel::findBy('id',$this->owl_carousel);
 		$this->Template->setData($objOwlCarousel->row());
 
-		$objSlides = \OwlCarouselSlideModel::findPublishedByPid($this->owl_carousel);
+		$objSlides = OwlCarouselSlideModel::findPublishedByPid($this->owl_carousel);
 
 		// No items found
 		if ($objSlides !== null)
