@@ -11,33 +11,11 @@
 
 
 /**
- * Register the namespaces
+ * Register PSR-0 namespaces
  */
-ClassLoader::addNamespaces(array
-(
-	'Respinar\OwlCarousel'
-));
-
-
-/**
- * Register the classes
- */
-ClassLoader::addClasses(array
-(
-
-	// Classes
-	'Respinar\OwlCarousel\FrontendOwlCarousel'   => 'system/modules/owlcarousel/library/Respinar/OwlCarousel/Frontend/FrontendOwlCarousel.php',
-
-	// Modules
-	'Respinar\OwlCarousel\ModuleOwlCarousel'     => 'system/modules/owlcarousel/library/Respinar/OwlCarousel/Frontend/Modules/ModuleOwlCarousel.php',
-
-	// Elements
-	'Respinar\OwlCarousel\ContentOwlCarousel'    => 'system/modules/owlcarousel/library/Respinar/OwlCarousel/Frontend/Elements/ContentOwlCarousel.php',
-
-	// Models
-	'Respinar\OwlCarousel\OwlCarouselModel'      => 'system/modules/owlcarousel/library/Respinar/OwlCarousel/Models/OwlCarouselModel.php',
-	'Respinar\OwlCarousel\OwlCarouselSlideModel' => 'system/modules/owlcarousel/library/Respinar/OwlCarousel/Models/OwlCarouselSlideModel.php',
-));
+ if (class_exists('NamespaceClassLoader')) {
+    NamespaceClassLoader::add('Respinar\OwlCarousel', 'system/modules/owlcarousel/library');
+}
 
 
 /**
