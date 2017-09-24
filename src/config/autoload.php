@@ -11,14 +11,6 @@
 
 
 /**
- * Register PSR-0 namespaces
- */
- if (class_exists('NamespaceClassLoader')) {
-    NamespaceClassLoader::add('Respinar\OwlCarousel', 'system/modules/owlcarousel/library');
-}
-
-
-/**
  * Register the templates
  */
 TemplateLoader::addFiles(array
