@@ -23,13 +23,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Respinar\\OwlCarousel\\": "library/"
+            "Respinar\\OwlCarousel\\": "src/library/"
         }
     },
     "extra": {
         "contao": {
             "sources": {
-                "": "system/modules/owlcarousel"
+                "src": "system/modules/owlcarousel"
             },
             "transifex": {
                 "project": "contao-owlcarousel",
