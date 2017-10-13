@@ -35,7 +35,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['owl_carousel'] = array
 	'inputType'            => 'radio',
 	'foreignKey'           => 'tl_owlcarousel.title',
 	'eval'                 => array('multiple'=>false, 'mandatory'=>true),
-	'sql'				   => "int(10) unsigned NOT NULL default '0'",
+	'sql'                  => "int(10) unsigned NOT NULL default '0'",
 );
 
 $GLOBALS['TL_DCA']['tl_content']['fields']['owl_slide_template'] = array
@@ -44,8 +44,8 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['owl_slide_template'] = array
 	'exclude'              => true,
 	'inputType'            => 'select',
 	'options_callback'     => array('tl_content_owlcarousel', 'getSlideTemplates'),
-	'eval'				   => array('tl_class'=>'w50 clr'),
-	'sql'				   => "varchar(64) NOT NULL default ''",
+	'eval'                 => array('tl_class'=>'w50 clr'),
+	'sql'                  => "varchar(64) NOT NULL default ''",
 );
 
 /**
