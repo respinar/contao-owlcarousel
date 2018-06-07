@@ -94,10 +94,10 @@
       <?php endif; ?>      
     <?php endif; ?>
 
-    <?php if($this->owl_animateIn && $this->owl_itmes==1): ?>
+    <?php if($this->owl_animateIn && $this->owl_items==1): ?>
       animateIn:'<?= $this->owl_animateIn ?>',
     <?php endif; ?>
-    <?php if($this->owl_animateOut && $this->owl_itmes==1): ?>
+    <?php if($this->owl_animateOut && $this->owl_items==1): ?>
       animateOut:'<?= $this->owl_animateOut ?>',
     <?php endif; ?>
     
