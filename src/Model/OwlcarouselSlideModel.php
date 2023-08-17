@@ -14,14 +14,14 @@
 /**
  * Namespace
  */
-namespace Respinar\OwlCarouselBundle\Model;
+namespace Respinar\OwlcarouselBundle\Model;
 
 use Contao\Model;
 
 /**
  * Class OwlCarouselSlideModel
  */
-class OwlCarouselSlideModel extends Model
+class OwlcarouselSlideModel extends Model
 {
 
 	/**

@@ -10,8 +10,8 @@
  * @license    MIT 
  */
 
-use Respinar\OwlCarouselBundle\Model\OwlCarouselModel;
-use Respinar\OwlCarouselBundle\Model\OwlCarouselSlideModel;
+use Respinar\OwlcarouselBundle\Model\OwlcarouselModel;
+use Respinar\OwlcarouselBundle\Model\OwlcarouselSlideModel;
 
  array_insert($GLOBALS['BE_MOD']['content'], 1, array
 (
@@ -24,8 +24,8 @@ use Respinar\OwlCarouselBundle\Model\OwlCarouselSlideModel;
 /**
  * Register models
  */
- $GLOBALS['TL_MODELS']['tl_owlcarousel']       = OwlCarouselModel::class;
- $GLOBALS['TL_MODELS']['tl_owlcarousel_slide'] = OwlCarouselSlideModel::class; 
+ $GLOBALS['TL_MODELS']['tl_owlcarousel']       = OwlcarouselModel::class;
+ $GLOBALS['TL_MODELS']['tl_owlcarousel_slide'] = OwlcarouselSlideModel::class; 
 
 /**
  * Front end modules
