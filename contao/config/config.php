@@ -3,33 +3,36 @@
 /**
  * Owlcarousel Extension for Contao Open Source CMS
  *
- * @copyright  Copyright (c) 2017, Respinar
- * @author     Respinar <info@respinar.com>
- * @license    http://opensource.org/licenses/lgpl-3.0.html LGPL
- * @link       https://respinar.com/
+ * @copyright  Copyright (c) 2023, Respinar
+ * 
+ * @author     Hamid Peywasti <hamid@respinar.com>
+ * 
+ * @license    MIT 
  */
+
+use Respinar\OwlCarouselBundle\Model\OwlCarouselModel;
+use Respinar\OwlCarouselBundle\Model\OwlCarouselSlideModel;
 
  array_insert($GLOBALS['BE_MOD']['content'], 1, array
 (
 	'owlcarousel' => array
 	(
-		'tables' => array('tl_owlcarousel', 'tl_owlcarousel_slide', 'tl_content'),
-		'icon'   => 'system/modules/owlcarousel/assets/icon.png'
+		'tables' => array('tl_owlcarousel', 'tl_owlcarousel_slide', 'tl_content')
 	)
 ));
 
 /**
  * Register models
  */
- $GLOBALS['TL_MODELS']['tl_owlcarousel']       = 'Respinar\OwlCarousel\Model\OwlCarouselModel';
- $GLOBALS['TL_MODELS']['tl_owlcarousel_slide'] = 'Respinar\OwlCarousel\Model\OwlCarouselSlideModel'; 
+ $GLOBALS['TL_MODELS']['tl_owlcarousel']       = OwlCarouselModel::class;
+ $GLOBALS['TL_MODELS']['tl_owlcarousel_slide'] = OwlCarouselSlideModel::class; 
 
 /**
  * Front end modules
  */
-$GLOBALS['FE_MOD']['application']['owlcarousel']   = 'Respinar\OwlCarousel\Frontend\Module\ModuleOwlCarousel';
+//$GLOBALS['FE_MOD']['application']['owlcarousel']   = 'Respinar\OwlCarousel\Frontend\Module\ModuleOwlCarousel';
 
 /**
  * Content elements
  */
-$GLOBALS['TL_CTE']['miscellaneous']['owlcarousel'] = 'Respinar\OwlCarousel\Frontend\Element\ContentOwlCarousel';
+//$GLOBALS['TL_CTE']['miscellaneous']['owlcarousel'] = 'Respinar\OwlCarousel\Frontend\Element\ContentOwlCarousel';
