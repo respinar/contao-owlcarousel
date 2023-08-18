@@ -9,6 +9,8 @@
  * @link       https://respinar.com/
  */
 
+use Contao\Backend;
+
 /**
  * Add palettes to tl_module
  */
