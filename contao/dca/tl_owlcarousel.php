@@ -49,7 +49,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 		(
 			'all' => array
 			(
-				'label'               => &$GLOBALS['TL_LANG']['MSC']['all'],
 				'href'                => 'act=select',
 				'class'               => 'header_edit_all',
 				'attributes'          => 'onclick="Backend.getScrollOffset();" accesskey="e"'
@@ -59,34 +58,29 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 		(
 			'edit' => array
 			(
-				'label'               => &$GLOBALS['TL_LANG']['tl_owlcarousel']['edit'],
 				'href'                => 'table=tl_owlcarousel_slide',
-				'icon'                => 'edit.gif'
+				'icon'                => 'edit.svg'
 			),
 			'editheader' => array
 			(
-				'label'               => &$GLOBALS['TL_LANG']['tl_owlcarousel']['editheader'],
 				'href'                => 'act=edit',
-				'icon'                => 'header.gif'
+				'icon'                => 'header.svg'
 			),
 			'copy' => array
 			(
-				'label'               => &$GLOBALS['TL_LANG']['tl_owlcarousel']['copy'],
 				'href'                => 'act=copy',
-				'icon'                => 'copy.gif'
+				'icon'                => 'copy.svg'
 			),
 			'delete' => array
 			(
-				'label'               => &$GLOBALS['TL_LANG']['tl_owlcarousel']['delete'],
 				'href'                => 'act=delete',
-				'icon'                => 'delete.gif',
+				'icon'                => 'delete.svg',
 				'attributes'          => 'onclick="if(!confirm(\'' . $GLOBALS['TL_LANG']['MSC']['deleteConfirm'] . '\'))return false;Backend.getScrollOffset()"'
 			),
 			'show' => array
 			(
-				'label'               => &$GLOBALS['TL_LANG']['tl_owlcarousel']['show'],
 				'href'                => 'act=show',
-				'icon'                => 'show.gif'
+				'icon'                => 'show.svg'
 			)
 		)
 	),
@@ -132,7 +126,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 		),
 		'title' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['title'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('mandatory'=>true, 'maxlength'=>255),
@@ -140,7 +133,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 		),
 		'owl_items' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_items'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('rgxp'=>'natural', 'tl_class'=>'w50'),
@@ -149,7 +141,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_margin' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_margin'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('rgxp'=>'natural', 'tl_class'=>'w50'),
@@ -157,7 +148,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 		),
 		'owl_stagePadding' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_stagePadding'],
 			'exclude'                 => true,	
 			'inputType'               => 'text',
 			'eval'                    => array('rgxp'=>'natural', 'tl_class'=>'w50'),
@@ -166,7 +156,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_loop' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_loop'],
 			'exclude'                 => true,
 			'default'                 => true,
 			'inputType'               => 'checkbox',
@@ -176,7 +165,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_center' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_center'],
 			'exclude'                 => true,
 			'inputType'               => 'checkbox',
 			'eval'                    => array('tl_class'=>'w50'),
@@ -185,7 +173,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_rtl' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_rtl'],
 			'exclude'                 => true,
 			'inputType'               => 'checkbox',
 			'eval'                    => array('tl_class'=>'w50'),
@@ -194,7 +181,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_lazyLoad' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_lazyLoad'],
 			'exclude'                 => true,
 			'inputType'               => 'checkbox',
 			'eval'                    => array('tl_class'=>'w50'),
@@ -203,7 +189,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_merge' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_merge'],
 			'exclude'                 => true,
 			'inputType'               => 'checkbox',
 			'eval'                    => array('tl_class'=>'w50'),
@@ -211,7 +196,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 		),
 		'owl_mergeFit' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_mergeFit'],
 			'exclude'                 => true,
 			'default'                 => true,
 			'inputType'               => 'checkbox',
@@ -220,7 +204,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 		),
 		'owl_autoWidth' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_autoWidth'],
 			'exclude'                 => true,
 			'inputType'               => 'checkbox',
 			'eval'                    => array('tl_class'=>'w50'),
@@ -229,7 +212,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_autoHeight' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_autoHeight'],
 			'exclude'                 => true,
 			'inputType'               => 'checkbox',
 			'eval'                    => array('tl_class'=>'w50'),
@@ -238,7 +220,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_nav' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_nav'],
 			'exclude'                 => true,
 			'inputType'               => 'checkbox',
 			'eval'                    => array('submitOnChange'=>true),
@@ -247,7 +228,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_rewind' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_rewind'],
 			'exclude'                 => true,
 			'default'                 => true,
 			'inputType'               => 'checkbox',
@@ -257,7 +237,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_navText' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_navText'],
 			'exclude'                 => true,
 			'search'                  => true,
 			'default'                 => array('prev','next'),
@@ -268,7 +247,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_navSpeed' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_navSpeed'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('rgxp'=>'natural', 'tl_class'=>'w50'),
@@ -277,7 +255,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_slideBy' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_slideBy'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('rgxp'=>'natural','tl_class'=>'w50'),
@@ -286,7 +263,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_dots' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_dots'],
 			'exclude'                 => true,
 			'default'                 => true,
 			'inputType'               => 'checkbox',
@@ -296,7 +272,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_dotsEach' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_dotsEach'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('rgxp'=>'natural', 'tl_class'=>'w50'),
@@ -305,7 +280,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_dotsSpeed' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_dotsSpeed'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('rgxp'=>'natural', 'tl_class'=>'w50'),
@@ -314,7 +288,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_autoplay' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_autoplay'],
 			'exclude'                 => true,
 			'inputType'               => 'checkbox',
 			'eval'                    => array('submitOnChange'=>true),
@@ -323,7 +296,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_autoplayHoverPause' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_autoplayHoverPause'],
 			'exclude'                 => true,
 			'inputType'               => 'checkbox',
 			'eval'                    => array('tl_class'=>'w50 clr'),
@@ -332,7 +304,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_autoplaySpeed' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_autoplaySpeed'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('rgxp'=>'natural', 'tl_class'=>'w50 clr'),
@@ -341,7 +312,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_autoplayTimeout' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_autoplayTimeout'],
 			'exclude'                 => true,
 			'default'                  => 5000,
 			'inputType'               => 'text',
@@ -351,7 +321,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_smartSpeed' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_smartSpeed'],
 			'exclude'                 => true,
 			'default'                  => 250,
 			'inputType'               => 'text',
@@ -361,7 +330,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_fluidSpeed' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_fluidSpeed'],
 			'exclude'                 => true,
 			'inputType'               => 'text',
 			'eval'                    => array('rgxp'=>'natural', 'tl_class'=>'w50'),
@@ -370,7 +338,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_animateIn' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_animateIn'],
 			'exclude'                 => true,
 			'search'                  => true,
 			'inputType'               => 'select',
@@ -381,7 +348,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 
 		'owl_animateOut' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['owl_animateOut'],
 			'exclude'                 => true,
 			'search'                  => true,
 			'inputType'               => 'select',
@@ -391,7 +357,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 		),
 		'protected' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['protected'],
 			'exclude'                 => true,
 			'inputType'               => 'checkbox',
 			'eval'                    => array('submitOnChange'=>true),
@@ -399,7 +364,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 		),
 		'groups' => array
 		(
-			'label'                   => &$GLOBALS['TL_LANG']['tl_owlcarousel']['groups'],
 			'exclude'                 => true,
 			'inputType'               => 'checkbox',
 			'foreignKey'              => 'tl_member_group.name',
