@@ -41,7 +41,7 @@ class OwlcarouselController extends AbstractContentElementController
 		$objOwlCarousel = OwlcarouselModel::findBy('id',$model->owl_carousel);
 		$template->setData($objOwlCarousel->row());
 
-		$template->navText = StringUtil::deserialize($objOwlCarousel->navText);
+		$template->navText = json_encode(StringUtil::deserialize($objOwlCarousel->navText));
 
 		$objSlides = OwlcarouselSlideModel::findPublishedByPid($model->owl_carousel);
 

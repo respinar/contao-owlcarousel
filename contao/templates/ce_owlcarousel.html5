@@ -33,7 +33,7 @@ $(document).ready(function(){
     
     <?php if($this->nav): ?> 
       nav:true,
-      <?php if($this->navText): ?>  navText:['<?= $this->navText[1] ?>','<?= $this->navText[0] ?>'], <?php endif; ?>
+      <?php if($this->navText): ?>  navText:<?= $this->navText ?>, <?php endif; ?>
       <?php if($this->navSpeed): ?> navSpeed:<?= $this->navSpeed ?>, <?php endif; ?>      
       <?php if($this->slideBy): ?>  slideBy:<?= $this->slideBy ?>, <?php endif; ?>
     <?php endif; ?>
@@ -54,9 +54,9 @@ $(document).ready(function(){
     <?php endif; ?>
     
     <?php if($this->items==1): ?>
-      <?php if($this->animateIn) : ?> animateIn:'<?= $this->animateIn ?>', <?php endif; ?>
+      <?php if($this->animateIn): ?>  animateIn:'<?= $this->animateIn ?>', <?php endif; ?>
       <?php if($this->animateOut): ?> animateOut:'<?= $this->animateOut ?>', <?php endif; ?>
-    <? endif; ?>
+    <?php endif; ?>
     
   });
 });
