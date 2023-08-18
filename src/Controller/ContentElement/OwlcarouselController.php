@@ -56,7 +56,7 @@ class OwlcarouselController extends AbstractContentElementController
         $GLOBALS['TL_BODY'][] = Template::generateStyleTag('bundles/respinarowlcarousel/OwlCarousel2/assets/owl.carousel.min.css', false, null);
         $GLOBALS['TL_BODY'][] = Template::generateStyleTag('bundles/respinarowlcarousel/OwlCarousel2/assets/owl.theme.default.min.css', false, null);
 
-		if ($objOwlCarousel->owl_animateIn || $objOwlCarousel->owl_animateOut) {
+		if ($objOwlCarousel->animateIn || $objOwlCarousel->animateOut) {
 			$GLOBALS['TL_BODY'][] = Template::generateStyleTag('bundles/respinarowlcarousel/OwlCarousel2/animate/animate.min.css', false, null);
 		}
 
