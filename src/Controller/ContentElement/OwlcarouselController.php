@@ -15,6 +15,7 @@ namespace Respinar\OwlcarouselBundle\Controller\ContentElement;
 use Contao\ContentModel;
 use Contao\CoreBundle\Controller\ContentElement\AbstractContentElementController;
 use Contao\CoreBundle\DependencyInjection\Attribute\AsContentElement;
+use Contao\StringUtil;
 use Contao\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -40,6 +41,7 @@ class OwlcarouselController extends AbstractContentElementController
 		$objOwlCarousel = OwlcarouselModel::findBy('id',$model->owl_carousel);
 		$template->setData($objOwlCarousel->row());
 
+		$template->navText = StringUtil::deserialize($objOwlCarousel->navText);
 
 		$objSlides = OwlcarouselSlideModel::findPublishedByPid($model->owl_carousel);
 
