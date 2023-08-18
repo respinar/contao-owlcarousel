@@ -16,6 +16,7 @@ use Contao\CoreBundle\Controller\FrontendModule\AbstractFrontendModuleController
 use Contao\CoreBundle\DependencyInjection\Attribute\AsFrontendModule;
 use Contao\ModuleModel;
 use Contao\Template;
+use Contao\StringUtil;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Respinar\OwlcarouselBundle\Helper\Owlcarousel;
@@ -40,6 +41,7 @@ class OwlcarouselController extends AbstractFrontendModuleController
 		$objOwlCarousel = OwlcarouselModel::findBy('id',$model->owl_carousel);
 		$template->setData($objOwlCarousel->row());
 
+		$template->navText = StringUtil::deserialize($objOwlCarousel->navText);
 
 		$objSlides = OwlcarouselSlideModel::findPublishedByPid($model->owl_carousel);
 
@@ -54,7 +56,7 @@ class OwlcarouselController extends AbstractFrontendModuleController
         $GLOBALS['TL_BODY'][] = Template::generateStyleTag('bundles/respinarowlcarousel/OwlCarousel2/assets/owl.carousel.min.css', false, null);
         $GLOBALS['TL_BODY'][] = Template::generateStyleTag('bundles/respinarowlcarousel/OwlCarousel2/assets/owl.theme.default.min.css', false, null);
 
-		if ($objOwlCarousel->owl_animateIn || $objOwlCarousel->owl_animateOut) {
+		if ($objOwlCarousel->animateIn || $objOwlCarousel->animateOut) {
 			$GLOBALS['TL_BODY'][] = Template::generateStyleTag('bundles/respinarowlcarousel/OwlCarousel2/animate/animate.min.css', false, null);
 		}
 
