@@ -17,7 +17,7 @@ use Respinar\OwlcarouselBundle\Model\OwlcarouselSlideModel;
 (
 	'owlcarousel' => array
 	(
-		'tables' => array('tl_owlcarousel', 'tl_owlcarousel_slide', 'tl_content')
+		'tables' => array('tl_owlcarousel', 'tl_content')
 	)
 ));
 
