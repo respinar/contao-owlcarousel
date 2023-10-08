@@ -1,0 +1,26 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" original="vendor/respinar/contao-owlcarousel/contao/languages/en/tl_content.php" source-language="en" target-language="de">
+    <body>
+      <trans-unit id="tl_content.owl_carousel.0">
+        <source>Owl Carousel</source>
+        <target>Owl Carousel</target>
+      </trans-unit>
+      <trans-unit id="tl_content.owl_carousel.1">
+        <source>Please select an owlcarousel.</source>
+        <target>Bitte wählen Sie ein OwlCarousel aus.</target>
+      </trans-unit>
+      <trans-unit id="tl_content.owl_slide_template.0">
+        <source>Slide Template</source>
+        <target>Folienvorlage</target>
+      </trans-unit>
+      <trans-unit id="tl_content.owl_slide_template.1">
+        <source>Please select a template.</source>
+        <target>Bitte wählen Sie eine Vorlage aus.</target>
+      </trans-unit>
+      <trans-unit id="tl_content.owlcarousel_legend">
+        <source>Owl carousel</source>
+        <target>Owl carousel</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
