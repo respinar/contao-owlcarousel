@@ -1,0 +1,243 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" original="vendor/respinar/contao-owlcarousel/contao/languages/en/tl_owlcarousel.php" source-language="en" target-language="de">
+    <body>
+      <trans-unit id="tl_owlcarousel.title.0">
+        <source>Title</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.title.1">
+        <source>Please enter the owl carousel title.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.items.0">
+        <source>Items</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.items.1">
+        <source>The number of items you want to see on the screen.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.margin.0">
+        <source>Margin</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.margin.1">
+        <source>margin-right(px) on item.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.stagePadding.0">
+        <source>Stage padding</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.stagePadding.1">
+        <source>Padding left and right on stage (can see neighbours).</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.loop.0">
+        <source>Loop</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.loop.1">
+        <source>Infinity loop. Duplicate last and first items to get loop illusion.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.rewind.0">
+        <source>Rewind</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.rewind.1">
+        <source>Go backwards when the boundary has reached.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.center.0">
+        <source>Center</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.center.1">
+        <source>Center item. Works well with even an odd number of items.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.rtl.0">
+        <source>RTL</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.rtl.1">
+        <source>Right to Left</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.lazyLoad.0">
+        <source>Lazy load</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.lazyLoad.1">
+        <source>Lazy load images. data-src and data-src-retina for highres. Also load images into background inline style if element is not &amp;lt;img&gt;</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.merge.0">
+        <source>Merge</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.merge.1">
+        <source>Merge items. Looking for data-merge='number' inside item..</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.mergeFit.0">
+        <source>Merge fit</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.mergeFit.1">
+        <source>Fit merged items if screen is smaller than items value.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.autoWidth.0">
+        <source>Auto width</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.autoWidth.1">
+        <source>Set non grid content. Try using width style on divs.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.autoHeight.0">
+        <source>Auto height</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.nav.0">
+        <source>Prev/next buttons</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.nav.1">
+        <source>Show next/prev buttons.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.navText.0">
+        <source>Prev/next buttons text</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.navText.1">
+        <source>navigation previuse and next button text.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.navSpeed.0">
+        <source>Navigation speed</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.navSpeed.1">
+        <source>Navigation speed.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.slideBy.0">
+        <source>Slide by</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.slideBy.1">
+        <source>Navigation slide by x. 'page' string can be set to slide by page.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.dots.0">
+        <source>Dots</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.dots.1">
+        <source>Show dots navigation.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.dotsEach.0">
+        <source>Dots each</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.dotsEach.1">
+        <source>Show dots each x item.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.dotsSpeed.0">
+        <source>Dots speed</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.dotsSpeed.1">
+        <source>Pagination speed.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.autoplay.0">
+        <source>Autoplay</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.autoplay.1">
+        <source>Autoplay</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.autoplayHoverPause.0">
+        <source>Autoplay hover pause</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.autoplayHoverPause.1">
+        <source>Pause on mouse hover.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.autoplaySpeed.0">
+        <source>Autoplay speed</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.autoplaySpeed.1">
+        <source>Autoplay speed.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.autoplayTimeout.0">
+        <source>Autoplay timeout</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.autoplayTimeout.1">
+        <source>Autoplay interval timeout.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.smartSpeed.0">
+        <source>Smart speed</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.smartSpeed.1">
+        <source>Speed Calculate.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.fluidSpeed.0">
+        <source>Fluid speed</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.fluidSpeed.1">
+        <source>Speed Calculate.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.animateIn.0">
+        <source>Animate in</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.animateIn.1">
+        <source>Class for CSS3 animation in.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.animateOut.0">
+        <source>Animate out</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.animateOut.1">
+        <source>Class for CSS3 animation out.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.protected.0">
+        <source>Protect Owl carsousel</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.protected.1">
+        <source>Show owl carousel slides to certain member groups only.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.groups.0">
+        <source>Allowed member groups</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.groups.1">
+        <source>These groups will be able to see the owl carousel slides in this Owl carsousel.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.title_legend">
+        <source>Title</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.options_legend">
+        <source>Owl carousel Options</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.merge_legend">
+        <source>Merge options</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.nav_legend">
+        <source>Navigation options</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.dots_legend">
+        <source>Pagnation options</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.autoplay_legend">
+        <source>Autoplay options</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.animate_legend">
+        <source>Animation options</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.protected_legend">
+        <source>Access protection</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.new.0">
+        <source>New Owl carsousel</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.new.1">
+        <source>Add a new owl carousel</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.edit.0">
+        <source>Edit owl carousel</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.edit.1">
+        <source>Edit owl carousel ID %s</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.editheader.0">
+        <source>Edit owl carousel settings</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.editheader.1">
+        <source>Edit owl carousel settings ID %s</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.copy.0">
+        <source>Copy owl carousel</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.copy.1">
+        <source>Copy owl carousel ID %s</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.delete.0">
+        <source>Delete owl carousel</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.delete.1">
+        <source>Delete owl carousel ID %s</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.show.0">
+        <source>Owl carsousel details</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel.show.1">
+        <source>Show the details of owl carousel ID %s</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
