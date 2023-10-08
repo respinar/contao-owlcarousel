@@ -1,0 +1,114 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" original="vendor/respinar/contao-owlcarousel/contao/languages/en/tl_owlcarousel_slide.php" source-language="en" target-language="de">
+    <body>
+      <trans-unit id="tl_owlcarousel_slide.title.0">
+        <source>Slide title</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.title.1">
+        <source>Please enter the slide title.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.description.0">
+        <source>Description</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.description.1">
+        <source>The text is added to slide.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.style.0">
+        <source>CSS style</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.style.1">
+        <source>The CSS style is added in the HTML markup.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.data_merge.0">
+        <source>data merge</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.published.0">
+        <source>Publish slide</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.published.1">
+        <source>Make the slide publicly visible on the website.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.start.0">
+        <source>Show from</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.start.1">
+        <source>Do not show the slide on the website before this day.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.stop.0">
+        <source>Show until</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.stop.1">
+        <source>Do not show the slide on the website on and after this day.</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.description_legend">
+        <source>Description</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.image_legend">
+        <source>Image settings</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.title_legend">
+        <source>Title</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.publish_legend">
+        <source>Publish Settings</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.option_legend">
+        <source>Slide options</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.new.0">
+        <source>New slide</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.new.1">
+        <source>Add a new slide</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.copy.0">
+        <source>Copy slide</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.copy.1">
+        <source>Copy slide ID %s</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.cut.0">
+        <source>Move slide</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.cut.1">
+        <source>Move slide ID %s</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.delete.0">
+        <source>Delete slide</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.delete.1">
+        <source>Delete slide ID %s</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.edit.0">
+        <source>Edit slide</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.edit.1">
+        <source>Edit slide ID %s</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.pasteafter.0">
+        <source>Paste into this category</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.pasteafter.1">
+        <source>Paste after slide ID %s</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.pastenew.0">
+        <source>Add new at the top</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.pastenew.1">
+        <source>Add new after slide ID %s</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.show.0">
+        <source>slide details</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.show.1">
+        <source>Show the details of slide ID %s</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.toggle.0">
+        <source>Publish/unpublish slide</source>
+      </trans-unit>
+      <trans-unit id="tl_owlcarousel_slide.toggle.1">
+        <source>Publish/unpublish slide ID %s</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
