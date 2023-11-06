@@ -1,12 +1,11 @@
 <?php
 
-/**
- * Owlcarousel Extension for Contao Open Source CMS
+/*
+ * This file is part of Contao OwlCarousel Bundle.
  *
- * @copyright  Copyright (c) 2017, Respinar
- * @author     Respinar <info@respinar.com>
- * @license    http://opensource.org/licenses/lgpl-3.0.html LGPL
- * @link       https://respinar.com/
+ * (c) Hamid Peywasti 2023 <hamid@respinar.com>
+ *
+ * @license MIT
  */
 
 
@@ -20,7 +19,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 	'config' => array
 	(
 		'dataContainer'    => 'Table',
-		'ctable'           => array('tl_owlcarousel_slide'),
+		'ctable'           => array('tl_content'),
 		'enableVersioning'            => true,
 		'sql' => array
 		(
@@ -58,7 +57,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 		(
 			'edit' => array
 			(
-				'href'     => 'table=tl_owlcarousel_slide',
+				'href'     => 'table=tl_content',
 				'icon'     => 'edit.svg'
 			),
 			'editheader' => array
@@ -122,7 +121,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 		),
 		'tstamp' => array
 		(
-			'sql'          => "int(10) unsigned NOT NULL default '0'"
+			'sql'          => "int(10) unsigned NOT NULL default 0"
 		),
 		'title' => array
 		(
@@ -134,9 +133,10 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 		'items' => array
 		(
 			'exclude'      => true,
+			'default'      => 3,
 			'inputType'    => 'text',
 			'eval'         => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'          => "smallint(5) unsigned NOT NULL default '3'"
+			'sql'          => "smallint(5) unsigned NOT NULL default 3"
 		),
 
 		'margin' => array
@@ -144,14 +144,14 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'text',
 			'eval'         => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'          => "smallint(5) unsigned NOT NULL default '0'"
+			'sql'          => "smallint(5) unsigned NOT NULL default 0"
 		),
 		'stagePadding' => array
 		(
-			'exclude'      => true,	
+			'exclude'      => true,
 			'inputType'    => 'text',
 			'eval'         => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'          => "smallint(5) unsigned NOT NULL default '0'"
+			'sql'          => "smallint(5) unsigned NOT NULL default 0"
 		),
 
 		'loop' => array
@@ -160,7 +160,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'default'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('tl_class'=>'w50 m12'),
-			'sql'          => "char(1) NOT NULL default ''"
+			'sql'          => array('type' => 'boolean', 'default' => true)
 		),
 
 		'center' => array
@@ -168,7 +168,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('tl_class'=>'w50'),
-			'sql'          => "char(1) NOT NULL default ''"
+			'sql'          => array('type' => 'boolean', 'default' => false)
 		),
 
 		'rtl' => array
@@ -176,7 +176,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('tl_class'=>'w50'),
-			'sql'          => "char(1) NOT NULL default ''"
+			'sql'          => array('type' => 'boolean', 'default' => false)
 		),
 
 		'lazyLoad' => array
@@ -184,7 +184,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('tl_class'=>'w50'),
-			'sql'          => "char(1) NOT NULL default ''"
+			'sql'          => array('type' => 'boolean', 'default' => false)
 		),
 
 		'merge' => array
@@ -192,7 +192,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('tl_class'=>'w50'),
-			'sql'          => "char(1) NOT NULL default ''"
+			'sql'          => array('type' => 'boolean', 'default' => false)
 		),
 		'mergeFit' => array
 		(
@@ -200,14 +200,14 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'default'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('tl_class'=>'w50'),
-			'sql'          => "char(1) NOT NULL default ''"
+			'sql'          => array('type' => 'boolean', 'default' => true)
 		),
 		'autoWidth' => array
 		(
 			'exclude'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('tl_class'=>'w50'),
-			'sql'          => "char(1) NOT NULL default ''"
+			'sql'          => array('type' => 'boolean', 'default' => false)
 		),
 
 		'autoHeight' => array
@@ -215,7 +215,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('tl_class'=>'w50'),
-			'sql'          => "char(1) NOT NULL default ''"
+			'sql'          => array('type' => 'boolean', 'default' => false)
 		),
 
 		'nav' => array
@@ -223,7 +223,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('submitOnChange'=>true),
-			'sql'          => "char(1) NOT NULL default ''"
+			'sql'          => array('type' => 'boolean', 'default' => false)
 		),
 
 		'rewind' => array
@@ -232,13 +232,12 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'default'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('tl_class'=>'w50'),
-			'sql'          => "char(1) NOT NULL default ''"
+			'sql'          => array('type' => 'boolean', 'default' => true)
 		),
 
 		'navText' => array
 		(
 			'exclude'      => true,
-			'search'       => true,
 			'default'      => array('prev','next'),
 			'inputType'    => 'text',
 			'eval'         => array('maxlength'=>64,'multiple'=>true,'size'=>2, 'tl_class'=>'w50 clr'),
@@ -250,7 +249,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'text',
 			'eval'         => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'          => "smallint(5) unsigned NOT NULL default '0'"
+			'sql'          => "smallint(5) unsigned NOT NULL default 0"
 		),
 
 		'slideBy' => array
@@ -258,7 +257,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'text',
 			'eval'         => array('rgxp'=>'natural','tl_class'=>'w50'),
-			'sql'          => "smallint(5) unsigned NOT NULL default '1'"
+			'sql'          => "smallint(5) unsigned NOT NULL default 1"
 		),
 
 		'dots' => array
@@ -267,7 +266,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'default'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('submitOnChange'=>true),
-			'sql'          => "char(1) NOT NULL default ''"
+			'sql'          => array('type' => 'boolean', 'default' => true)
 		),
 
 		'dotsEach' => array
@@ -275,7 +274,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'text',
 			'eval'         => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'          => "smallint(5) unsigned NOT NULL default '0'"
+			'sql'          => "smallint(5) unsigned NOT NULL default 0"
 		),
 
 		'dotsSpeed' => array
@@ -283,7 +282,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'text',
 			'eval'         => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'          => "smallint(5) unsigned NOT NULL default '0'"
+			'sql'          => "smallint(5) unsigned NOT NULL default 0"
 		),
 
 		'autoplay' => array
@@ -291,7 +290,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('submitOnChange'=>true),
-			'sql'          => "char(1) NOT NULL default ''"
+			'sql'          => array('type' => 'boolean', 'default' => false)
 		),
 
 		'autoplayHoverPause' => array
@@ -299,7 +298,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('tl_class'=>'w50 clr'),
-			'sql'          => "char(1) NOT NULL default ''"
+			'sql'          => array('type' => 'boolean', 'default' => false)
 		),
 
 		'autoplaySpeed' => array
@@ -307,7 +306,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'text',
 			'eval'         => array('rgxp'=>'natural', 'tl_class'=>'w50 clr'),
-			'sql'          => "smallint(5) unsigned NOT NULL default '0'"
+			'sql'          => "smallint(5) unsigned NOT NULL default 0"
 		),
 
 		'autoplayTimeout' => array
@@ -316,7 +315,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'default'      => 5000,
 			'inputType'    => 'text',
 			'eval'         => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'          => "smallint(5) unsigned NOT NULL default '0'"
+			'sql'          => "smallint(5) unsigned NOT NULL default 5000"
 		),
 
 		'smartSpeed' => array
@@ -325,7 +324,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'default'      => 250,
 			'inputType'    => 'text',
 			'eval'         => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'          => "smallint(5) unsigned NOT NULL default '0'"
+			'sql'          => "smallint(5) unsigned NOT NULL default 250"
 		),
 
 		'fluidSpeed' => array
@@ -333,13 +332,12 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'text',
 			'eval'         => array('rgxp'=>'natural', 'tl_class'=>'w50'),
-			'sql'          => "smallint(5) unsigned NOT NULL default '0'"
+			'sql'          => "smallint(5) unsigned NOT NULL default 0"
 		),
 
 		'animateIn' => array
 		(
 			'exclude'      => true,
-			'search'       => true,
 			'inputType'    => 'select',
 			'options'      => array('bounce','flash','pulse','rubberBand','shake','headShake','swing','tada','wobble','jello','bounceIn','bounceInDown','bounceInLeft','bounceInRight','bounceInUp','fadeIn','fadeInDown','fadeInDownBig','fadeInLeft','fadeInLeftBig','fadeInRight','fadeInRightBig','fadeInUp','fadeInUpBig','flipInX','flipInY','lightSpeedIn','rotateIn','rotateInDownLeft','rotateInDownRight','rotateInUpLeft','rotateInUpRight','hinge','rollIn','zoomIn','zoomInDown','zoomInLeft','zoomInRight','zoomInUp','slideInDown','slideInLeft','slideInRight','slideInUp'),
 			'eval'         => array('maxlength'=>64, 'chosen'=>true, 'includeBlankOption'=>true, 'tl_class'=>'w50'),
@@ -349,7 +347,6 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 		'animateOut' => array
 		(
 			'exclude'      => true,
-			'search'       => true,
 			'inputType'    => 'select',
 			'options'      => array('bounce','flash','pulse','rubberBand','shake','headShake','swing','tada','wobble','jello','bounceOut','bounceOutDown','bounceOutLeft','bounceOutRight','bounceOutUp','fadeOut','fadeOutDown','fadeOutDownBig','fadeOutLeft','fadeOutLeftBig','fadeOutRight','fadeOutRightBig','fadeOutUp','fadeOutUpBig','flipOutX','flipOutY','lightSpeedOut','rotateOut','rotateOutDownLeft','rotateOutDownRight','rotateOutUpLeft','rotateOutUpRight','hinge','rollOut','zoomOut','zoomOutDown','zoomOutLeft','zoomOutRight','zoomOutUp','slideOutDown','slideOutLeft','slideOutRight','slideOutUp'),
 			'eval'         => array('maxlength'=>64, 'chosen'=>true, 'includeBlankOption'=>true, 'tl_class'=>'w50'),
@@ -360,7 +357,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('submitOnChange'=>true),
-			'sql'          => "char(1) NOT NULL default ''"
+			'sql'          => array('type' => 'boolean', 'default' => false)
 		),
 		'groups' => array
 		(

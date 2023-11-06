@@ -3,10 +3,10 @@
 declare(strict_types=1);
 
 /*
- * This file is part of Contao Owl Carousel Bundle.
+ * This file is part of Contao OwlCarousel Bundle.
  *
- * (c) Hamid Abbaszadeh 2023 <abbaszadeh.h@gmail.com>
- * 
+ * (c) Hamid Peywasti 2023 <hamid@respinar.com>
+ *
  * @license MIT
  */
 

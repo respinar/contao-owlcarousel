@@ -1,12 +1,11 @@
 <?php
 
-/**
- * Owlcarousel Extension for Contao Open Source CMS
+/*
+ * This file is part of Contao OwlCarousel Bundle.
  *
- * @copyright  Copyright (c) 2017, Respinar
- * @author     Respinar <info@respinar.com>
- * @license    http://opensource.org/licenses/lgpl-3.0.html LGPL
- * @link       https://respinar.com/
+ * (c) Hamid Peywasti 2023 <hamid@respinar.com>
+ *
+ * @license MIT
  */
 
 use Contao\System;
@@ -171,7 +170,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel_slide'] = array
 			'inputType'               => 'text',
 			'eval'                    => array('maxlength'=>255, 'tl_class'=>'long clr'),
 			'sql'                     => "varchar(255) NOT NULL default ''"
-		),	
+		),
 		'size' => array
 		(
 			'exclude'                 => true,
@@ -200,7 +199,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel_slide'] = array
 			'inputType'               => 'text',
 			'eval'                    => array('maxlength'=>255, 'tl_class'=>'w50'),
 			'sql'                     => "varchar(255) NOT NULL default ''"
-		),		
+		),
 		'data_merge' => array
 		(
 			'exclude'                 => true,
@@ -208,7 +207,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel_slide'] = array
 			'inputType'               => 'text',
 			'eval'                    => array('maxlength'=>255, 'tl_class'=>'w50'),
 			'sql'                     => "varchar(255) NOT NULL default ''"
-		),	
+		),
 		'published' => array
 		(
 			'exclude'                 => true,
@@ -218,7 +217,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel_slide'] = array
 			'inputType'               => 'checkbox',
 			'eval'                    => array('doNotCopy'=>true),
 			'sql'                     => "char(1) NOT NULL default ''"
-		),		
+		),
 		'start' => array
 		(
 			'exclude'                 => true,

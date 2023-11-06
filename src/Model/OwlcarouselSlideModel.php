@@ -1,13 +1,11 @@
 <?php
 
-/**
- * Owlcarousel Extension for Contao Open Source CMS
+/*
+ * This file is part of Contao OwlCarousel Bundle.
  *
- * @copyright  Copyright (c) 2023, Respinar
- * 
- * @author     Hamid Peywasti <hamid@respinar.com>
- * 
- * @license    MIT 
+ * (c) Hamid Peywasti 2023 <hamid@respinar.com>
+ *
+ * @license MIT
  */
 
 
