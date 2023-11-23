@@ -4,3 +4,7 @@
 # src
 /assets/src/
 
+
+# node
+/node_modules/
+
