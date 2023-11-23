@@ -52,12 +52,12 @@ class OwlcarouselController extends AbstractFrontendModuleController
 			$template->slides = Owlcarousel::parseSlides($objSlides, $model);
 		}
 
-		$GLOBALS['TL_BODY'][] = Template::generateScriptTag('bundles/respinarowlcarousel/OwlCarousel2/owl.carousel.min.js', false, null);
-        $GLOBALS['TL_BODY'][] = Template::generateStyleTag('bundles/respinarowlcarousel/OwlCarousel2/assets/owl.carousel.min.css', false, null);
-        $GLOBALS['TL_BODY'][] = Template::generateStyleTag('bundles/respinarowlcarousel/OwlCarousel2/assets/owl.theme.default.min.css', false, null);
+		$GLOBALS['TL_BODY'][] = Template::generateScriptTag('bundles/respinarowlcarousel/owl.carousel.min.js', false, null);
+        $GLOBALS['TL_BODY'][] = Template::generateStyleTag('bundles/respinarowlcarousel/assets/owl.carousel.min.css', false, null);
+        $GLOBALS['TL_BODY'][] = Template::generateStyleTag('bundles/respinarowlcarousel/assets/owl.theme.default.min.css', false, null);
 
 		if ($objOwlCarousel->animateIn || $objOwlCarousel->animateOut) {
-			$GLOBALS['TL_BODY'][] = Template::generateStyleTag('bundles/respinarowlcarousel/OwlCarousel2/animate/animate.min.css', false, null);
+			$GLOBALS['TL_BODY'][] = Template::generateStyleTag('bundles/respinarowlcarousel/animate/animate.min.css', false, null);
 		}
 
         return $template->getResponse();
