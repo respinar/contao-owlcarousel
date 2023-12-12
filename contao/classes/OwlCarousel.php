@@ -12,7 +12,7 @@
 /**
  * Namespace
  */
-namespace Respinar\OwlcarouselBundle\Helper;
+namespace Respinar\OwlCarouselBundle;
 
 use Contao\FrontendTemplate;
 use Contao\ContentModel;
@@ -24,7 +24,7 @@ use Contao\System;
 /**
  * Class OwlCarousel
  */
-class Owlcarousel
+class OwlCarousel
 {
 
 	static public function parseSlides($objSlides, $model)
