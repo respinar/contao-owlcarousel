@@ -4,6 +4,6 @@ services:
         autowire: true
         autoconfigure: true
 
-    Respinar\OwlcarouselBundle\:
+    Respinar\OwlCarouselBundle\:
         resource: ../src/
         exclude: ../src/DependencyInjection
