@@ -10,20 +10,20 @@ declare(strict_types=1);
  * @license MIT
  */
 
-namespace Respinar\OwlcarouselBundle\ContaoManager;
+namespace Respinar\OwlCarouselBundle\ContaoManager;
 
 use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
-use Respinar\OwlcarouselBundle\RespinarOwlcarouselBundle;
+use Respinar\OwlCarouselBundle\RespinarContaoOwlcarouselBundle;
 
 class Plugin implements BundlePluginInterface
 {
     public function getBundles(ParserInterface $parser): array
     {
         return [
-            BundleConfig::create(RespinarOwlcarouselBundle::class)
+            BundleConfig::create(RespinarContaoOwlCarouselBundle::class)
                 ->setLoadAfter([ContaoCoreBundle::class]),
         ];
     }
