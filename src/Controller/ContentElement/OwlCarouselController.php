@@ -10,7 +10,7 @@ declare(strict_types=1);
  * @license MIT
  */
 
-namespace Respinar\OwlcarouselBundle\Controller\ContentElement;
+namespace Respinar\OwlCarouselBundle\Controller\ContentElement;
 
 use Contao\ContentModel;
 use Contao\CoreBundle\Controller\ContentElement\AbstractContentElementController;
@@ -19,12 +19,12 @@ use Contao\StringUtil;
 use Contao\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Respinar\OwlcarouselBundle\Helper\Owlcarousel;
-use Respinar\OwlcarouselBundle\Model\OwlcarouselModel;
-use Respinar\OwlcarouselBundle\Model\OwlcarouselSlideModel;
+use Respinar\OwlCarouselBundle\OwlCarousel;
+use Respinar\OwlCarouselBundle\Model\OwlCarouselModel;
+use Respinar\OwlCarouselBundle\Model\OwlCarouselSlideModel;
 
 #[AsContentElement(category: 'media')]
-class OwlcarouselController extends AbstractContentElementController
+class OwlCarouselController extends AbstractContentElementController
 {
     protected function getResponse(Template $template, ContentModel $model, Request $request): Response
     {
