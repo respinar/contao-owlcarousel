@@ -10,14 +10,14 @@ declare(strict_types=1);
  * @license MIT
  */
 
-namespace Respinar\OwlcarouselBundle\DependencyInjection;
+namespace Respinar\OwlCarouselBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
-class RespinarOwlcarouselExtension extends Extension
+class RespinarContaoOwlCarouselExtension extends Extension
 {
     /**
      * @throws \Exception
