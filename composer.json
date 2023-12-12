@@ -25,7 +25,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Respinar\\OwlcarouselBundle\\": "src/"
+            "Respinar\\OwlCarouselBundle\\": "src/"
         }
     },
     "config": {
@@ -35,6 +35,6 @@
         }
     },
     "extra": {
-        "contao-manager-plugin": "Respinar\\OwlcarouselBundle\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "Respinar\\OwlCarouselBundle\\ContaoManager\\Plugin"
     }
 }
