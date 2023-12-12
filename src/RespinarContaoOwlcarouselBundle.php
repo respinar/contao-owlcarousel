@@ -10,12 +10,12 @@ declare(strict_types=1);
  * @license MIT
  */
 
-namespace Respinar\OwlcarouselBundle;
+namespace Respinar\OwlCarouselBundle;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class RespinarOwlcarouselBundle extends Bundle
+class RespinarContaoOwlCarouselBundle extends Bundle
 {
     public function getPath(): string
     {
