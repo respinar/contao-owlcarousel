@@ -10,7 +10,7 @@ declare(strict_types=1);
  * @license MIT
  */
 
-namespace Respinar\OwlcarouselBundle\Controller\FrontendModule;
+namespace Respinar\OwlCarouselBundle\Controller\FrontendModule;
 
 use Contao\CoreBundle\Controller\FrontendModule\AbstractFrontendModuleController;
 use Contao\CoreBundle\DependencyInjection\Attribute\AsFrontendModule;
@@ -19,12 +19,12 @@ use Contao\Template;
 use Contao\StringUtil;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Respinar\OwlcarouselBundle\Helper\Owlcarousel;
-use Respinar\OwlcarouselBundle\Model\OwlcarouselModel;
-use Respinar\OwlcarouselBundle\Model\OwlcarouselSlideModel;
+use Respinar\OwlCarouselBundle\OwlCarousel;
+use Respinar\OwlCarouselBundle\Model\OwlcarouselModel;
+use Respinar\OwlCarouselBundle\Model\OwlcarouselSlideModel;
 
 #[AsFrontendModule(category: 'application')]
-class OwlcarouselController extends AbstractFrontendModuleController
+class OwlCarouselController extends AbstractFrontendModuleController
 {
     protected function getResponse(Template $template, ModuleModel $model, Request $request): Response
     {
