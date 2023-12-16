@@ -12,13 +12,16 @@
 /**
  * Table tl_owlcarousel
  */
+
+use Contao\DC_Table;
+
 $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 (
 
 	// Config
 	'config' => array
 	(
-		'dataContainer'    => 'Table',
+		'dataContainer'    => DC_Table::class,
 		'ctable'           => array('tl_content'),
 		'enableVersioning'            => true,
 		'sql' => array
