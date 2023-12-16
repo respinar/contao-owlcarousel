@@ -23,7 +23,7 @@ use Respinar\OwlCarouselBundle\OwlCarousel;
 use Respinar\OwlCarouselBundle\Model\OwlCarouselModel;
 use Respinar\OwlCarouselBundle\Model\OwlCarouselSlideModel;
 
-#[AsContentElement(category: 'media')]
+#[AsContentElement(category: 'media', template: 'ce_owlcarousel')]
 class OwlCarouselController extends AbstractContentElementController
 {
     protected function getResponse(Template $template, ContentModel $model, Request $request): Response
