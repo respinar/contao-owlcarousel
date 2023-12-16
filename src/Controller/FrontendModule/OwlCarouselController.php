@@ -23,7 +23,7 @@ use Respinar\OwlCarouselBundle\OwlCarousel;
 use Respinar\OwlCarouselBundle\Model\OwlcarouselModel;
 use Respinar\OwlCarouselBundle\Model\OwlcarouselSlideModel;
 
-#[AsFrontendModule(category: 'application')]
+#[AsFrontendModule(category: 'application', template: 'mod_owlcarousel')]
 class OwlCarouselController extends AbstractFrontendModuleController
 {
     protected function getResponse(Template $template, ModuleModel $model, Request $request): Response
