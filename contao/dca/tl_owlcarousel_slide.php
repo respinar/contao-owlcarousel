@@ -13,6 +13,7 @@ use Contao\Backend;
 use Contao\FilesModel;
 use Contao\Image;
 use Contao\DataContainer;
+use Contao\DC_Table;
 use Contao\Input;
 
 /**
@@ -30,7 +31,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel_slide'] = array
 	// Config
 	'config' => array
 	(
-		'dataContainer'               => 'Table',
+		'dataContainer'               => DC_Table::class,
 		'ptable'                      => 'tl_owlcarousel',
 		'ctable'                      => array('tl_content'),
 		'enableVersioning'            => true,
