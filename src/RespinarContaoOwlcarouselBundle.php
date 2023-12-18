@@ -15,7 +15,7 @@ namespace Respinar\OwlCarouselBundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class RespinarContaoOwlCarouselBundle extends Bundle
+class RespinarContaoOwlcarouselBundle extends Bundle
 {
     public function getPath(): string
     {
