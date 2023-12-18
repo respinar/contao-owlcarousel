@@ -11,6 +11,10 @@
  /**
  * Dynamically add the permission check and parent table
  */
+
+use Contao\Backend;
+use Contao\Input;
+
 if (Input::get('do') == 'owlcarousel')
 {
 	$GLOBALS['TL_DCA']['tl_content']['config']['ptable'] = 'tl_owlcarousel_slide';
