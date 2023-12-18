@@ -23,7 +23,7 @@ class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser): array
     {
         return [
-            BundleConfig::create(RespinarContaoOwlCarouselBundle::class)
+            BundleConfig::create(RespinarContaoOwlcarouselBundle::class)
                 ->setLoadAfter([ContaoCoreBundle::class]),
         ];
     }
