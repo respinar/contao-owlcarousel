@@ -1,0 +1,11 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    respinar.migration.boolean_fields:
+        class:  Respinar\OwlCarouselBundle\Migration\BooleanFieldsMigration
+        arguments:
+            - '@database_connection'
+            - '@contao.framework'
+            - '@contao.resource_finder'
