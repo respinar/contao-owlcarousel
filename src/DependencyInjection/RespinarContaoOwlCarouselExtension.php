@@ -31,5 +31,6 @@ class RespinarContaoOwlCarouselExtension extends Extension
         );
 
         $loader->load('services.yaml');
+        $loader->load('migrations.yaml');
     }
 }
