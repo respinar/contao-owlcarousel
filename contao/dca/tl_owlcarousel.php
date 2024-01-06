@@ -163,7 +163,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'default'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('tl_class'=>'w50 m12'),
-			'sql'          => array('type' => 'boolean', 'default' => true)
+			'sql'          => "char(1) NOT NULL default ''"
 		),
 
 		'center' => array
@@ -171,7 +171,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('tl_class'=>'w50'),
-			'sql'          => array('type' => 'boolean', 'default' => false)
+			'sql'          => "char(1) NOT NULL default ''"
 		),
 
 		'rtl' => array
@@ -179,7 +179,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('tl_class'=>'w50'),
-			'sql'          => array('type' => 'boolean', 'default' => false)
+			'sql'          => "char(1) NOT NULL default ''"
 		),
 
 		'lazyLoad' => array
@@ -187,7 +187,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('tl_class'=>'w50'),
-			'sql'          => array('type' => 'boolean', 'default' => false)
+			'sql'          => "char(1) NOT NULL default ''"
 		),
 
 		'merge' => array
@@ -195,7 +195,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('tl_class'=>'w50'),
-			'sql'          => array('type' => 'boolean', 'default' => false)
+			'sql'          => "char(1) NOT NULL default ''"
 		),
 		'mergeFit' => array
 		(
@@ -203,14 +203,14 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'default'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('tl_class'=>'w50'),
-			'sql'          => array('type' => 'boolean', 'default' => true)
+			'sql'          => "char(1) NOT NULL default ''"
 		),
 		'autoWidth' => array
 		(
 			'exclude'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('tl_class'=>'w50'),
-			'sql'          => array('type' => 'boolean', 'default' => false)
+			'sql'          => "char(1) NOT NULL default ''"
 		),
 
 		'autoHeight' => array
@@ -218,7 +218,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('tl_class'=>'w50'),
-			'sql'          => array('type' => 'boolean', 'default' => false)
+			'sql'          => "char(1) NOT NULL default ''"
 		),
 
 		'nav' => array
@@ -226,7 +226,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('submitOnChange'=>true),
-			'sql'          => array('type' => 'boolean', 'default' => false)
+			'sql'          => "char(1) NOT NULL default ''"
 		),
 
 		'rewind' => array
@@ -235,7 +235,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'default'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('tl_class'=>'w50'),
-			'sql'          => array('type' => 'boolean', 'default' => true)
+			'sql'          => "char(1) NOT NULL default ''"
 		),
 
 		'navText' => array
@@ -269,7 +269,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'default'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('submitOnChange'=>true),
-			'sql'          => array('type' => 'boolean', 'default' => true)
+			'sql'          => "char(1) NOT NULL default ''"
 		),
 
 		'dotsEach' => array
@@ -293,7 +293,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('submitOnChange'=>true),
-			'sql'          => array('type' => 'boolean', 'default' => false)
+			'sql'          => "char(1) NOT NULL default ''"
 		),
 
 		'autoplayHoverPause' => array
@@ -301,7 +301,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('tl_class'=>'w50 clr'),
-			'sql'          => array('type' => 'boolean', 'default' => false)
+			'sql'          => "char(1) NOT NULL default ''"
 		),
 
 		'autoplaySpeed' => array
@@ -360,7 +360,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 			'exclude'      => true,
 			'inputType'    => 'checkbox',
 			'eval'         => array('submitOnChange'=>true),
-			'sql'          => array('type' => 'boolean', 'default' => false)
+			'sql'          => "char(1) NOT NULL default ''"
 		),
 		'groups' => array
 		(
