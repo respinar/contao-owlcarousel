@@ -22,8 +22,8 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 	'config' => array
 	(
 		'dataContainer'    => DC_Table::class,
-		'ctable'           => array('tl_content'),
-		'enableVersioning'            => true,
+		'ctable'           => array('tl_owlcarousel_slide'),
+		'enableVersioning' => true,
 		'sql' => array
 		(
 			'keys' => array
@@ -60,29 +60,29 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = array
 		(
 			'edit' => array
 			(
-				'href'     => 'table=tl_content',
-				'icon'     => 'edit.svg'
+				'href'       => 'table=tl_owlcarousel_slide',
+				'icon'       => 'edit.svg'
 			),
 			'editheader' => array
 			(
-				'href'     => 'act=edit',
-				'icon'     => 'header.svg'
+				'href'       => 'act=edit',
+				'icon'       => 'header.svg'
 			),
 			'copy' => array
 			(
-				'href'     => 'act=copy',
-				'icon'     => 'copy.svg'
+				'href'       => 'act=copy',
+				'icon'       => 'copy.svg'
 			),
 			'delete' => array
 			(
-				'href'     => 'act=delete',
-				'icon'     => 'delete.svg',
-				'attributes'          => 'onclick="if(!confirm(\'' . ($GLOBALS['TL_LANG']['MSC']['deleteConfirm'] ?? null) . '\'))return false;Backend.getScrollOffset()"'
+				'href'       => 'act=delete',
+				'icon'       => 'delete.svg',
+				'attributes' => 'onclick="if(!confirm(\'' . ($GLOBALS['TL_LANG']['MSC']['deleteConfirm'] ?? null) . '\'))return false;Backend.getScrollOffset()"'
 			),
 			'show' => array
 			(
-				'href'     => 'act=show',
-				'icon'     => 'show.svg'
+				'href'       => 'act=show',
+				'icon'       => 'show.svg'
 			)
 		)
 	),
