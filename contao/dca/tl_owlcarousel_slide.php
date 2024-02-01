@@ -33,10 +33,10 @@ $GLOBALS['TL_DCA']['tl_owlcarousel_slide'] = array
 	// Config
 	'config' => array
 	(
-		'dataContainer'               => DC_Table::class,
-		'ptable'                      => 'tl_owlcarousel',
-		'ctable'                      => array('tl_content'),
-		'enableVersioning'            => true,
+		'dataContainer'		=> DC_Table::class,
+		'ptable'            => 'tl_owlcarousel',
+		'ctable'            => array('tl_content'),
+		'enableVersioning'  => true,
 		'sql' => array
 		(
 			'keys' => array
@@ -117,7 +117,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel_slide'] = array
 	// Palettes
 	'palettes' => array
 	(
-		'default'                     => '{title_legend},title;{image_legend},singleSRC,alt,size,imageUrl;{description_legend},description;{option_legend},style,data_merge;{publish_legend},published'
+		'default'          => '{title_legend},title;{image_legend},singleSRC,alt,size,imageUrl;{description_legend},description;{option_legend},style,data_merge;{publish_legend},published'
 	),
 
 	// Subpalettes
@@ -130,113 +130,113 @@ $GLOBALS['TL_DCA']['tl_owlcarousel_slide'] = array
 	(
 		'id' => array
 		(
-			'sql'                     => "int(10) unsigned NOT NULL auto_increment"
+			'sql'          => "int(10) unsigned NOT NULL auto_increment"
 		),
 		'pid' => array
 		(
-			'sql'                     => "int(10) unsigned NOT NULL default '0'"
+			'sql'          => "int(10) unsigned NOT NULL default '0'"
 		),
 		'sorting' => array
 		(
-			'sql'                     => "int(10) unsigned NOT NULL default '0'"
+			'sql'          => "int(10) unsigned NOT NULL default '0'"
 		),
 		'tstamp' => array
 		(
-			'sql'                     => "int(10) unsigned NOT NULL default '0'"
+			'sql'          => "int(10) unsigned NOT NULL default '0'"
 		),
 		'title' => array
 		(
-			'exclude'                 => true,
-			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>true, 'maxlength'=>255),
-			'sql'                     => "varchar(255) NOT NULL default ''"
+			'exclude'      => true,
+			'inputType'    => 'text',
+			'eval'         => array('mandatory'=>true, 'maxlength'=>255),
+			'sql'          => "varchar(255) NOT NULL default ''"
 		),
 		'description' => array
 		(
-			'exclude'                 => true,
-			'search'                  => true,
-			'inputType'               => 'textarea',
-			'eval'                    => array('rte'=>'tinyMCE'),
-			'sql'                     => "text NULL"
+			'exclude'      => true,
+			'search'       => true,
+			'inputType'    => 'textarea',
+			'eval'         => array('rte'=>'tinyMCE'),
+			'sql'          => "text NULL"
 		),
 		'singleSRC' => array
 		(
-			'exclude'                 => true,
-			'inputType'               => 'fileTree',
-			'eval'                    => array('mandatory'=>true,'fieldType'=>'radio', 'files'=>true, 'filesOnly'=>true, 'extensions'=>'%contao.image.valid_extensions%'),
-			'sql'                     => "binary(16) NULL"
+			'exclude'      => true,
+			'inputType'    => 'fileTree',
+			'eval'         => array('mandatory'=>true,'fieldType'=>'radio', 'files'=>true, 'filesOnly'=>true, 'extensions'=>'%contao.image.valid_extensions%'),
+			'sql'          => "binary(16) NULL"
 		),
 		'alt' => array
 		(
-			'exclude'                 => true,
-			'search'                  => true,
-			'inputType'               => 'text',
-			'eval'                    => array('maxlength'=>255, 'tl_class'=>'long clr'),
-			'sql'                     => "varchar(255) NOT NULL default ''"
+			'exclude'      => true,
+			'search'       => true,
+			'inputType'    => 'text',
+			'eval'         => array('maxlength'=>255, 'tl_class'=>'long clr'),
+			'sql'          => "varchar(255) NOT NULL default ''"
 		),
 		'size' => array
 		(
-			'exclude'                 => true,
-			'inputType'               => 'imageSize',
-			'reference'               => &$GLOBALS['TL_LANG']['MSC'],
+			'exclude'      => true,
+			'inputType'    => 'imageSize',
+			'reference'    => &$GLOBALS['TL_LANG']['MSC'],
 			'options_callback' => function () {
 				return System::getContainer()->get('contao.image.image_sizes')->getOptionsForUser(BackendUser::getInstance());
 			},
-			'reference'               => &$GLOBALS['TL_LANG']['MSC'],
-			'eval'                    => array('rgxp'=>'natural', 'includeBlankOption'=>true, 'nospace'=>true, 'helpwizard'=>true, 'tl_class'=>'w50'),
-			'sql'                     => "varchar(64) NOT NULL default ''"
+			'reference'    => &$GLOBALS['TL_LANG']['MSC'],
+			'eval'         => array('rgxp'=>'natural', 'includeBlankOption'=>true, 'nospace'=>true, 'helpwizard'=>true, 'tl_class'=>'w50'),
+			'sql'          => "varchar(64) NOT NULL default ''"
 		),
 		'imageUrl' => array
 		(
-			'exclude'                 => true,
-			'search'                  => true,
-			'inputType'               => 'text',
-			'eval'                    => array('rgxp'=>'url', 'decodeEntities'=>true, 'maxlength'=>255, 'fieldType'=>'radio', 'filesOnly'=>true, 'tl_class'=>'w50 wizard'),
-			'wizard' => array
+			'exclude'      => true,
+			'search'       => true,
+			'inputType'    => 'text',
+			'eval'         => array('rgxp'=>'url', 'decodeEntities'=>true, 'maxlength'=>255, 'fieldType'=>'radio', 'filesOnly'=>true, 'tl_class'=>'w50 wizard'),
+			'wizard'       => array
 			(
 				array('tl_owlcarousel_slide', 'pagePicker')
 			),
-			'sql'                     => "varchar(255) NOT NULL default ''"
+			'sql'          => "varchar(255) NOT NULL default ''"
 		),
 		'style' => array
 		(
-			'exclude'                 => true,
-			'search'                  => true,
-			'inputType'               => 'text',
-			'eval'                    => array('maxlength'=>255, 'tl_class'=>'w50'),
-			'sql'                     => "varchar(255) NOT NULL default ''"
+			'exclude'      => true,
+			'search'       => true,
+			'inputType'    => 'text',
+			'eval'         => array('maxlength'=>255, 'tl_class'=>'w50'),
+			'sql'          => "varchar(255) NOT NULL default ''"
 		),
 		'data_merge' => array
 		(
-			'exclude'                 => true,
-			'search'                  => true,
-			'inputType'               => 'text',
-			'eval'                    => array('maxlength'=>255, 'tl_class'=>'w50'),
-			'sql'                     => "varchar(255) NOT NULL default ''"
+			'exclude'      => true,
+			'search'       => true,
+			'inputType'    => 'text',
+			'eval'         => array('maxlength'=>255, 'tl_class'=>'w50'),
+			'sql'          => "varchar(255) NOT NULL default ''"
 		),
 		'published' => array
 		(
-			'exclude'                 => true,
-			'toggle'                  => true,
-			'filter'                  => true,
-			'flag'                    => 1,
-			'inputType'               => 'checkbox',
-			'eval'                    => array('doNotCopy'=>true),
-			'sql'                     => "char(1) NOT NULL default ''"
+			'exclude'      => true,
+			'toggle'       => true,
+			'filter'       => true,
+			'flag'         => 1,
+			'inputType'    => 'checkbox',
+			'eval'         => array('doNotCopy'=>true),
+			'sql'          => "char(1) NOT NULL default ''"
 		),
 		'start' => array
 		(
-			'exclude'                 => true,
-			'inputType'               => 'text',
-			'eval'                    => array('rgxp'=>'datim', 'datepicker'=>true, 'tl_class'=>'w50 wizard'),
-			'sql'                     => "varchar(10) NOT NULL default ''"
+			'exclude'      => true,
+			'inputType'    => 'text',
+			'eval'         => array('rgxp'=>'datim', 'datepicker'=>true, 'tl_class'=>'w50 wizard'),
+			'sql'          => "varchar(10) NOT NULL default ''"
 		),
 		'stop' => array
 		(
-			'exclude'                 => true,
-			'inputType'               => 'text',
-			'eval'                    => array('rgxp'=>'datim', 'datepicker'=>true, 'tl_class'=>'w50 wizard'),
-			'sql'                     => "varchar(10) NOT NULL default ''"
+			'exclude'      => true,
+			'inputType'    => 'text',
+			'eval'         => array('rgxp'=>'datim', 'datepicker'=>true, 'tl_class'=>'w50 wizard'),
+			'sql'          => "varchar(10) NOT NULL default ''"
 		)
 	)
 );
@@ -259,7 +259,7 @@ class tl_owlcarousel_slide extends Backend
 
 		if ($objImage !== null)
 		{
-			// $strImage = Image::getHtml(Image::get($objImage->path, '100', '50', 'center_center'));
+			$strImage = Image::getHtml(Image::get($objImage->path, '100', '50', 'center_center'));
 			$strImage = '';
 		}
 
