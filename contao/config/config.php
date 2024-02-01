@@ -11,7 +11,9 @@
 use Respinar\OwlCarouselBundle\Model\OwlCarouselModel;
 use Respinar\OwlCarouselBundle\Model\OwlCarouselSlideModel;
 
-$GLOBALS['BE_MOD']['content']['owlcarousel'] = array('tables' => array('tl_owlcarousel', 'tl_content'));
+$GLOBALS['BE_MOD']['content']['owlcarousel'] = array(
+    'tables' => array('tl_owlcarousel', 'tl_owlcarousel_slide', 'tl_content')
+);
 
 /**
  * Register models
