@@ -31,25 +31,23 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['owlcarousel']   = '{title_legend},
 /**
  * Add fields to tl_content
  */
-$GLOBALS['TL_DCA']['tl_content']['fields']['owl_carousel'] = array
-(
+$GLOBALS['TL_DCA']['tl_content']['fields']['owl_carousel'] = [
 	'label'                => &$GLOBALS['TL_LANG']['tl_content']['owl_carousel'],
 	'exclude'              => true,
 	'inputType'            => 'radio',
 	'foreignKey'           => 'tl_owlcarousel.title',
-	'eval'                 => array('multiple'=>false, 'mandatory'=>true),
+	'eval'                 => ['multiple' => false, 'mandatory' => true],
 	'sql'                  => "int(10) unsigned NOT NULL default '0'",
-);
+];
 
-$GLOBALS['TL_DCA']['tl_content']['fields']['owl_slide_template'] = array
-(
+$GLOBALS['TL_DCA']['tl_content']['fields']['owl_slide_template'] = [
 	'label'                => &$GLOBALS['TL_LANG']['tl_content']['owl_slide_template'],
 	'exclude'              => true,
 	'inputType'            => 'select',
-	'options_callback'     => array('tl_content_owlcarousel', 'getSlideTemplates'),
-	'eval'                 => array('tl_class'=>'w50 clr'),
+	'options_callback'     => ['tl_content_owlcarousel', 'getSlideTemplates'],
+	'eval'                 => ['tl_class' => 'w50 clr'],
 	'sql'                  => "varchar(64) NOT NULL default ''",
-);
+];
 
 /**
  * Class tl_content_owlcarousel
