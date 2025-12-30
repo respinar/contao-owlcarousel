@@ -53,6 +53,7 @@ class OwlCarousel
 		$objTemplate->setData($objSlide->row());
 
 		$objTemplate->addImage = false;
+		$objTemplate->text = '';
 
 		// Add an image
 		if ($objSlide->singleSRC != '')
