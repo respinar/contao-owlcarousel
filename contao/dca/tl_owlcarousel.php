@@ -20,7 +20,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = [
 	// Config
 	'config' => [
 		'dataContainer' => DC_Table::class,
-		'ctable' => ['tl_content'],
+		'ctable' => ['tl_owlcarousel_slide'],
 		'enableVersioning' => true,
 		'sql' => [
 			'keys' => [
@@ -49,7 +49,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel'] = [
 		],
 		'operations' => [
 			'edit' => [
-				'href' => 'table=tl_content',
+				'href' => 'table=tl_owlcarousel_slide',
 				'icon' => 'edit.svg'
 			],
 			'editheader' => [
