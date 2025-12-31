@@ -187,7 +187,7 @@ $GLOBALS['TL_DCA']['tl_owlcarousel_slide'] = [
 			'flag' => 1,
 			'inputType' => 'checkbox',
 			'eval' => ['doNotCopy' => true],
-			'sql' => "char(1) NOT NULL default ''"
+			'sql' => ['type' => 'boolean', 'default' => false]
 		],
 		'start' => [
 			'exclude' => true,
