@@ -16,5 +16,6 @@
         $('#<?= specialchars($this->owlCarouselId) ?>').owlCarousel(<?= $this->owlCarouselConfig ?>);
 });
 </script>
+  <?php endif; ?>
 
 <?php $this->endblock(); ?>
