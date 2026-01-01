@@ -2,7 +2,7 @@
 
 <?php $this->block('content'); ?>
 
-  <div class="owl-carousel owl-theme">
+  <div id="<?= specialchars($this->owlCarouselId) ?>" class="owl-carousel owl-theme">
     <?php if (empty($this->slides)): ?>
       <p class="noslide"><?= $this->empty; ?></p>
     <?php else: ?>    
