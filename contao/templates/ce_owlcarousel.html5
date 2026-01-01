@@ -11,11 +11,11 @@
   </div>
 
   <?php if (!empty($this->slides)): ?>
-<script>
+    <script>
       jQuery(function($) {
         $('#<?= specialchars($this->owlCarouselId) ?>').owlCarousel(<?= $this->owlCarouselConfig ?>);
-});
-</script>
+      });
+    </script>
   <?php endif; ?>
 
 <?php $this->endblock(); ?>
